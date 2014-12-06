@@ -12,13 +12,15 @@ Google_S Wordpress Starter Theme is based on Underscores http://underscores.me/,
 also on Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google 
 
 Some basic features we have included in the Google_S Starter Theme:
-1 - Varie dimensioni per le thumbnails.
-2 - Una grafica a griglia per le Gallerie Media.
-3 - Un custom field per inserire del testo prima della immagine in evidenza nei post e nelle pagine.
-4 - Una Right Sidebar.
-5 - Una Footer Sidebar con del contenuto di default.
-6 - Lightbox per le immagini con link media e slide per le gallerie.
-7 - Simple jquery dropdown sub-menu
+<ul>
+<li>Varie dimensioni per le thumbnails.</li>
+<li>Una grafica a griglia per le Gallerie Media.</li>
+<li>Un custom field per inserire del testo prima della immagine in evidenza nei post e nelle pagine.</li>
+<li>Una Right Sidebar.</li>
+<li>Una Footer Sidebar con del contenuto di default.</li>
+<li>Lightbox per le immagini con link media e slide per le gallerie.</li>
+<li>Simple jquery dropdown sub-menu.</li>
+</ul>
 
 Tags: Full width, starter template, Google Web, Right Sidebar, Lightbox, Woocommerce support
 
