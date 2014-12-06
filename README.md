@@ -13,12 +13,12 @@ also on Google Web Starter Kit https://developers.google.com/web/starter-kit/, G
 
 Some basic features we have included in the Google_S Starter Theme:
 <ul>
-<li>Varie dimensioni per le thumbnails.</li>
-<li>Una grafica a griglia per le Gallerie Media.</li>
-<li>Un custom field per inserire del testo prima della immagine in evidenza nei post e nelle pagine.</li>
-<li>Una Right Sidebar.</li>
-<li>Una Footer Sidebar con del contenuto di default.</li>
-<li>Lightbox per le immagini con link media e slide per le gallerie.</li>
+<li>Various sizes for the thumbnails.</li>
+<li>A graphic grid for Media Galleries.</li>
+<li>A custom field to insert text before the image featured in posts and pages.</li>
+<li>A Right Sidebar fully responsive.</li>
+<li>A Footer Sidebar with default content.</li>
+<li>Lightbox for images with link media and slide for tunnels.</li>
 <li>Simple jquery dropdown sub-menu.</li>
 </ul>
 
