@@ -1,10 +1,10 @@
-google_s
+Google_S Wordpress Starter Theme
 ========
 
 New Wordpress Starter Theme based on Google Web Started Kit and generated from Underscore.
 
 Check it out on our blog:
-<a href"http://www.blog.altertech.it/google_s-wordpress-starter-theme-based-google-web-starter-kit/">
+<a href="http://www.blog.altertech.it/google_s-wordpress-starter-theme-based-google-web-starter-kit/">
 Google_S Wordpress Starter Theme
 </a>
 
