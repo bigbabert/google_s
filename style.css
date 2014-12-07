@@ -161,6 +161,12 @@ object {
 	display: block;
 	margin: 0 auto;
 }
+.featured-image-borded {
+float: left;
+padding: 0px;
+margin: 3%;
+border: 2px solid #ccc
+}
 
 /*--------------------------------------------------------------
 8.0 Clearings
