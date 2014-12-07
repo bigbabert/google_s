@@ -16,7 +16,7 @@
 			</h1>
 <?php the_title( sprintf( ' <h2 class="editorial-header__subtitle"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 <?php if ( has_post_thumbnail() ) : ?>
-				<a href="<?php the_permalink(); ?>"><p class="g-medium--full g-wide--full "><?php the_post_thumbnail( 'large' ); ?></p></a>
+				<a href="<?php the_permalink(); ?>"><p class="featured-image-borded"><?php the_post_thumbnail( 'large' ); ?></p></a>
  <?php endif; ?>
                   <p styleclass="editorial-header__excerpt "><?php the_excerpt(); ?></p>
                   

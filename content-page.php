@@ -11,7 +11,7 @@
 			<?php the_title( '<h2 class="editorial-header__subtitle">', '</h2>' ); ?>
         
                         <ol class="list-anchor xlarge"><?php the_meta('meta-textarea'); ?></ol>
-<p class="g-medium--full g-wide--full featured-image-borded"><?php the_post_thumbnail( 'large' ); ?></p>
+<p class="featured-image-borded"><?php the_post_thumbnail( 'large' ); ?></p>
 	</div>
     <p class="editorial-header__excerpt "><?php the_content(); ?></p>
 			
