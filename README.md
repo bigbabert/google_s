@@ -1,6 +1,15 @@
 Google_S Wordpress Starter Theme
 ========
-
+<stle>
+div.file-wrap {
+display:none;
+}
+</style>
+<script type="text/javascript">
+function showdiv(
+			document.getElementById(id).style.display = "block";
+		}
+</script>
 <h3>New Wordpress Starter Theme based on Google Web Started Kit and generated from Underscore.</h3>
 
 <p>Check it out on our blog:
@@ -23,7 +32,7 @@ also on Google Web Starter Kit https://developers.google.com/web/starter-kit/, G
 <li>Simple jquery dropdown sub-menu.</li>
 </ul>
 
-<p><img src="https://raw.githubusercontent.com/bigbabert/google_s/master/screenshot.png"></p>
+<p><a onclick="showdiv('div.file-wrap'); " href="#" >< img src="https://raw.githubusercontent.com/bigbabert/google_s/master/screenshot.png"></p>
 
 <p>Tags: Full width, starter template, Google Web, Right Sidebar, Lightbox, Woocommerce support</p>
 
