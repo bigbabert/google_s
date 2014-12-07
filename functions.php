@@ -6,6 +6,7 @@
  */
 
 if ( ! function_exists( 'google_s_setup' ) ) :
+    if ( ! isset( $content_width ) ) $content_width = 900;
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -13,6 +14,14 @@ if ( ! function_exists( 'google_s_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
+function my_theme_add_editor_styles() {
+    add_editor_style( 'custom-editor-style.css' );
+}
+add_action( 'after_setup_theme', 'my_theme_add_editor_styles' );
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
+ */
+
 function google_s_setup() {
 
 	/*
