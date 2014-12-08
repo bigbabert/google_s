@@ -14,6 +14,26 @@ if ( ! function_exists( 'google_s_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
+
+// Load main class
+if ( ! class_exists( 'GitHub_Updater' ) ) {
+	require 'inc/git-update/class-github-updater.php';
+}
+
+// Instantiate class GitHub_Updater
+new GitHub_Updater;
+
+/**
+ * Calls GitHub_Updater::init() in init hook so other remote upgrader apps like
+ * InfiniteWP, ManageWP, MainWP, and iThemes Sync will load and use all
+ * of GitHub_Updater's methods, especially renaming.
+ */
+add_action( 'init', array( 'GitHub_Updater', 'init' ) );
+
 function my_theme_add_editor_styles() {
     add_editor_style( 'custom-editor-style.css' );
 }
