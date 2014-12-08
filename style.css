@@ -690,37 +690,8 @@ margin-bottom: 40%;
 margin: 5%;
 }
 }
-@media screen and (min-device-width: 1024px){
+@media screen and (max-device-width: 1024px){
     .sidebar {
 width: 25% !important;
     }
-main {
-max-width: 664px !important;
-}
-.container {
-max-width: 660px !important;
-margin-left: -10px !important;
-}
-.editorial-header, .entry-content {
-width: 720px !important;
-}
-}
-@media screen and (min-device-width: 2560px){
-main {
-max-width: 1664px;
-padding-top: 0;
-min-height: initial;
-margin-right: -200px !important;
-}
-.g-wide--3 {
-float: left;
-margin-right: -3.7% !important;
-width: 90% !important;
-}
-.container {
-max-width: 1660px !important;
-}
-.editorial-header, .entry-content {
-max-width: 1550px !important;
-}
 }
