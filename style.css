@@ -718,6 +718,6 @@ margin-right: -3.7% !important;
 width: 90% !important;
 }
 .editorial-header, .entry-content {
-width: 1550px !important;
+max-width: 1550px !important;
 }
 }
