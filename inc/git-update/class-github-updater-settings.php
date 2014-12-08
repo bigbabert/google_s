@@ -13,12 +13,6 @@ class GitHub_Updater_Settings extends GitHub_Updater {
 	protected $options;
 
 	/**
-	 * Holds the plugin basename
-	 * @var string
-	 */
-	private $ghu_plugin_name = 'github-updater/github-updater.php';
-
-	/**
 	 * Listing of plugins.
 	 * @var array
 	 */
