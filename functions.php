@@ -7,18 +7,7 @@
 
 if ( ! function_exists( 'google_s_setup' ) ) :
     if ( ! isset( $content_width ) ) $content_width = 900;
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
 
-function my_theme_add_editor_styles() {
-    add_editor_style( 'custom-editor-style.css' );
-}
-add_action( 'after_setup_theme', 'my_theme_add_editor_styles' );
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  */
@@ -144,6 +133,11 @@ add_filter('dynamic_sidebar_params','widget_first_last_classes');
 /**
  * Enqueue scripts and styles.
  */
+   function google_s_add_editor_styles() {
+    add_editor_style( 'custom-editor-style.css' );
+}
+add_action( 'after_setup_theme', 'google_s_add_editor_styles' );
+
 function google_s_scripts() {
 	wp_enqueue_style( 'google_s-style', get_stylesheet_uri() );
         
@@ -155,6 +149,8 @@ function google_s_scripts() {
 
 	wp_enqueue_script( 'google_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
+     
+        
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
