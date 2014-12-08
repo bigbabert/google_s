@@ -695,22 +695,5 @@ margin: 5%;
 width: 25% !important;
     }
 }
-@media screen and (max-device-width: 2560px){
-main {
-max-width: 1664px;
-padding-top: 0;
-min-height: initial;
-margin-right: -200px !important;
-}
-.g-wide--3 {
-float: left;
-margin-right: -3.7% !important;
-width: 90% !important;
-}
-.container {
-max-width: 1464px !important;
-}
-.editorial-header, .entry-content {
-width: 1550px !important;
-}
+
 }
