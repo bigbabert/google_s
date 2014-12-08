@@ -25,6 +25,7 @@ get_header(); ?>
 
         $args = array(
             // Change these category SLUGS to suit your use.
+             'posts_per_page' => 5,
               'category_name' => '', 
           'paged' => $paged
         );
@@ -46,9 +47,6 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; ?>
-<div class="container nav-container">
-			<?php google_s_paging_nav(); ?>
-</div>
 		<?php else : ?>
 
 			<?php get_template_part( 'content', 'none' ); ?>
