@@ -690,8 +690,8 @@ margin-bottom: 40%;
 margin: 5%;
 }
 }
-@media screen and (max-device-width: 1024px){
-.sidebar {
+@media screen and (min-device-width: 1024px){
+    .sidebar {
 width: 25% !important;
     }
 main {
@@ -705,7 +705,7 @@ margin-left: -10px !important;
 width: 720px !important;
 }
 }
-@media screen and (max-device-width: 2560px){
+@media screen and (min-device-width: 2560px){
 main {
 max-width: 1664px;
 padding-top: 0;
@@ -716,6 +716,9 @@ margin-right: -200px !important;
 float: left;
 margin-right: -3.7% !important;
 width: 90% !important;
+}
+.container {
+max-width: 1660px !important;
 }
 .editorial-header, .entry-content {
 max-width: 1550px !important;
