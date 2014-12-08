@@ -648,6 +648,11 @@ margin-bottom: 40%;
 margin: 5%;
 }
 }
+@media screen and (min-device-width: 414px){
+#gc-footer {
+margin-top: 100%;
+}
+}
 @media screen and (max-device-width: 414px){
 a.logo {
 font-size: 16px !important;
