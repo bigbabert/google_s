@@ -1,20 +1,9 @@
 <?php
 /**
  * GitHub Updater
+ * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package   GitHub_Updater
- * @author    Andy Fragen
- * @author    Gary Jones
- * @license   GPL-2.0+
- * @link      https://github.com/afragen/github-updater
- */
-
-/**
- * Update a WordPress plugin or theme from a Git-based repo.
- *
- * @package GitHub_Updater
- * @author  Andy Fragen
- * @author  Gary Jones
+ * @package Google_S
  */
 class GitHub_Updater {
 

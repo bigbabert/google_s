@@ -2,19 +2,9 @@
 /**
  * GitHub Updater
  *
- * @package   GitHub_Updater
- * @author    Andy Fragen
- * @license   GPL-2.0+
- * @link      https://github.com/afragen/github-updater
- */
-
-/**
- * Update a WordPress plugin from a GitHub repo.
+ * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package GitHub_Plugin_Updater
- * @author  Andy Fragen
- * @author  Codepress
- * @link    https://github.com/codepress/github-plugin-updater
+ * @package Google_S
  */
 class GitHub_Plugin_Updater extends GitHub_Updater {
 

@@ -1,22 +1,9 @@
 <?php
 /**
  * GitHub Updater
+ * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package   GitHub_Updater
- * @author    Andy Fragen
- * @license   GPL-2.0+
- * @link      https://github.com/afragen/github-updater
- */
-
-/**
- * Update a WordPress theme from a GitHub repo.
- *
- * @package   GitHub_Theme_Updater
- * @author    Andy Fragen
- * @author    Seth Carstens
- * @link      https://github.com/WordPress-Phoenix/whitelabel-framework
- * @author    UCF Web Communications
- * @link      https://github.com/UCF/Theme-Updater
+ * @package Google_S
  */
 class GitHub_Theme_Updater extends GitHub_Updater {
 

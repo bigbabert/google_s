@@ -1,18 +1,9 @@
 <?php
 /**
  * GitHub Updater
+ * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package   GitHub_Updater
- * @author    Andy Fragen
- * @license   GPL-2.0+
- * @link      https://github.com/afragen/github-updater
- */
-
-/**
- * Add a settings page.
- *
- * @package GitHub_Updater_Settings
- * @author Andy Fragen
+ * @package Google_S
  */
 class GitHub_Updater_Settings extends GitHub_Updater {
 	/**

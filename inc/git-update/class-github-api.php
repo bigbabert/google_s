@@ -1,18 +1,9 @@
 <?php
 /**
  * GitHub Updater
+ * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package   GitHub_Updater
- * @author    Andy Fragen
- * @license   GPL-2.0+
- * @link      https://github.com/afragen/github-updater
- */
-
-/**
- * Get remote data from a GitHub repo.
- *
- * @package GitHub_Updater_GitHub_API
- * @author  Andy Fragen
+ * @package Google_S
  */
 class GitHub_Updater_GitHub_API extends GitHub_Updater {
 
