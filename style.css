@@ -697,6 +697,10 @@ width: 25% !important;
 main {
 max-width: 664px !important;
 }
+.container {
+max-width: 660px !important;
+margin-left: -10px !important;
+}
 .editorial-header, .entry-content {
 width: 720px !important;
 }
