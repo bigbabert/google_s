@@ -1,10 +1,10 @@
-/*
+comments/*
 Theme Name: Google_S
 Theme URI: http://www.blog.altertech.it/google_s-wordpress-starter-theme-based-google-web-starter-kit/
 Author: Bigbabert
 Author URI: http://www.blog.altertech.it/author/alberto-cocchiara/
 Description: New Wordpress multipropose starter theme based on Google Web Starter Kit and Underscores & Bootstrap 3.0
-Version: 1.0
+Version: 1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: google_s
@@ -152,16 +152,16 @@ object {
 
 .alignright {
 	display: inline;
-	float: right;
+	float: right !important;
 	margin-left: 1.5em;
 }
 
 .aligncenter {
 	clear: both;
-	display: block;
+	display: block !important;
 	margin: 0 auto;
 }
-.featured-image-borded {
+.featured-image-borded, .size-large {
 float: left;
 padding: 0px;
 margin: 3%;
@@ -193,6 +193,10 @@ letter-spacing: 1px;
 height: 60px;
 display: block;
 }
+.nav-links {
+margin-top:15% !important;
+display:inline-block;
+}
 #nosidebar, #page-full {
 margin-left: 2.5%;
 margin-right: 2.5%;
@@ -202,6 +206,11 @@ margin-right: 2.5%;
 	margin-bottom: 1em;
 	margin-left: 2%;
 	max-width: 33%;
+}
+.quote__content p {
+font-weight: 600 !important;
+margin-top: -12px !important;
+font-size: 26px !important;
 }
 #nosidebar .sidebar, #page-full .sidebar {
 display: none;
@@ -216,6 +225,23 @@ border-bottom: 1px solid #ccc;
 }
 .site-info a,.site-info a:hover, .site-info a:after, .site-info a:visited {
 color: #ffc;
+}
+.widget_meta li {
+background-color: #3372df;
+height: 50px;
+padding-top: 3%;
+padding-left: 0px;
+text-align: center;
+margin-bottom: 5%;
+margin-right: 15%;
+}
+.widget_meta li a {
+color: #fff;
+font-weight: 600;
+text-transform: uppercase;
+}
+.widget_meta li:hover {
+background-color: #b7cdf4;
 }
 input#s.medium {
 color: darkgray;
@@ -297,6 +323,15 @@ border: none;
             width: 90px !important;
             height: auto;
         }
+        h1.tag.editorial-header__title {
+line-height: 50px;
+margin-bottom: 5%;
+}
+div.editorial-header, p.editorial-header__excerpt, .editorial-header__subtitle {
+padding-top: 0;
+padding-bottom: 0px;
+margin-bottom: -50px;
+}
 #comments {  
 width:100%;
 float:left;
@@ -323,6 +358,13 @@ width: 100% !important;
 #comments label {
 font-size: 26px;
 }
+ textarea#comment {
+ max-width: 600px !important;
+ }
+ p.form-allowed-tags {
+ max-width: 600px !important;
+font-size: 12px !important;
+ }
 span.post-meta-key {
 display: none;
 }
@@ -339,6 +381,9 @@ margin-right: -7%;
 .featured-image-borded {
 margin-bottom: 5%;
 border-bottom: 1px solid #ccc;
+}
+img.attachment-large.wp-post-image {
+margin-top:4%;
 }
 a:-webkit-any-link {
 text-decoration: none;
@@ -387,6 +432,13 @@ width: 100%;
 list-style: none !important;
 list-style-type: none !important;
 font-family:'Roboto Condensed','Helvetica','Arial',sans-serif !important;
+}
+.post-type-archive-product main, .tax-product_cat main {
+margin-top: 2.5%;
+margin-left: 2.5%;
+}
+.single-product main {
+margin-top: 6%;
 }
 .widget ul li, .widget ul li::before {
 list-style: none !important;
@@ -440,6 +492,15 @@ line-height:60px;
 content:"\e002";
 color: white;
 }
+h1.tag.editorial-header__title {
+width: 100%;
+}
+.posted-on span.icon-circle.themed--background {
+background: #297ea9;
+display: inline;
+margin-right: 2%;
+position: relative;top: -5px;
+}
 .sub-menu {
 display: none;
 }
@@ -485,6 +546,9 @@ font-size: 16px !important;
         .sub-menu {
 display: inline-block !important;
 }
+#gc-footer {
+margin-top: 200%;
+}
 #comments {  
 width:80%;
 padding-left: 5%;
@@ -492,6 +556,13 @@ padding-left: 5%;
 legend {
 display: none;
 }
+img.attachment-large.wp-post-image {
+margin-top: 5%;
+}
+.image-borded {
+margin-top: 5% !important;
+}
+
 .sidebar {
 width: 320px !important;
 max-width: 100%;

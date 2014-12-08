@@ -8,7 +8,7 @@
  */
 ?>
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
-<div <?php if ( ! is_active_sidebar( 'sidebar-1' ) ) : ?>class="g-medium--full g-wide--full tophome"<?php else : ?>class="g-wide--3 g-medium--half"<?php endif; ?>>
+<div <?php if ( ! is_active_sidebar( 'sidebar-1' ) ) : ?>class="g-medium--full g-wide--full tophome"<?php else : ?>class="g-medium--full g-wide--full"<?php endif; ?>>
 	<div class="highlight-module   highlight-module--remember g-medium--full g-wide--full ">
 		<div class="highlight-module__container icon-exclamation g-medium--full g-wide--full">
 			<div class="highlight-module__content  g--half g--centered ">
@@ -31,7 +31,7 @@
 	</div>
 </div>	
 		<?php else : ?>
-<div <?php if ( ! is_active_sidebar( 'sidebar-1' ) ) : ?>class="g-medium--full g-wide--full tophome"<?php else : ?>class="g-wide--3 g-medium--half"<?php endif; ?>>
+<div <?php if ( ! is_active_sidebar( 'sidebar-1' ) ) : ?>class="g-medium--full g-wide--full tophome"<?php else : ?>class="g-medium--full g-wide--full"<?php endif; ?>>
 	<div class="highlight-module   highlight-module--remember g-medium--full g-wide--full ">
 		<div class="highlight-module__container icon-question g-medium--full g-wide--full">
 			<div class="highlight-module__content  g--half g--centered ">
@@ -42,4 +42,3 @@
 	</div>
 </div>
 		<?php endif; ?>
-

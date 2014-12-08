@@ -15,6 +15,7 @@
 
 <?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
 </main>
+<div class="clear"></div>
 <!-- #content -->
 <section class="styleguide__centered-list feature-spotlight g-medium--full g-wide--full" >
     <div class="container">
