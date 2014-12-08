@@ -8,7 +8,7 @@ Version: 1.3.2
 Template:         google_s
 Template Version: 1.3.2
 GitHub Theme URI: https://github.com/bigbabert/google_s
-GitHub Branch:    google_s
+GitHub Branch:    master
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: google_s
@@ -694,4 +694,22 @@ margin: 5%;
     .sidebar {
 width: 25% !important;
     }
+}
+@media screen and (max-device-width: 2560px){
+main {
+max-width: 1664px;
+padding-top: 0;
+min-height: initial;
+margin-right: -200px !important;
+}
+.g-wide--3 {
+float: left;
+margin-right: -3.7% !important;
+width: 90% !important;
+}
+.container {
+padding-left: 4.4%;
+padding-right: 4.4%;
+max-width: 1464px;
+}
 }
