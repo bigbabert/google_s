@@ -4,7 +4,7 @@ Theme URI: http://www.blog.altertech.it/google_s-wordpress-starter-theme-based-g
 Author: Bigbabert
 Author URI: http://www.blog.altertech.it/author/alberto-cocchiara/
 Description: New Wordpress multipropose starter theme based on Google Web Starter Kit and Underscores & Bootstrap 3.0
-Version: 1.1
+Version: 1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: google_s
@@ -17,7 +17,7 @@ Google_S is based on Underscores http://underscores.me/, (C) 2012-2014 Automatti
 also on Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google 
 
 Resetting and rebuilding styles have been helped along thanks to the fine work of
-Google Web Starter Kit and Bootstrap 3.0
+Google Web Starter Kit and Bootstrap 3.0 mixed by Bigbabert
 */
  
 /*--------------------------------------------------------------
@@ -382,7 +382,7 @@ margin-right: -7%;
 margin-bottom: 5%;
 border-bottom: 1px solid #ccc;
 }
-img.attachment-large.wp-post-image {
+.home img.attachment-large.wp-post-image, .page-template-page-blog-php img.attachment-large.wp-post-image {
 margin-top:4%;
 }
 a:-webkit-any-link {
