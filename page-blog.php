@@ -25,8 +25,7 @@ get_header(); ?>
 
         $args = array(
             // Change these category SLUGS to suit your use.
-             'posts_per_page' => 5,
-              'category_name' => '', 
+          'category_name' => '', 
           'paged' => $paged
         );
 
@@ -42,11 +41,12 @@ get_header(); ?>
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
 					get_template_part( 'content', get_post_format() );
-
-					wp_reset_postdata();
 				?>
 
 			<?php endwhile; ?>
+<div class="container nav-container">
+			<?php google_s_paging_nav(); ?>
+</div>
 		<?php else : ?>
 
 			<?php get_template_part( 'content', 'none' ); ?>
