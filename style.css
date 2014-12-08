@@ -708,8 +708,6 @@ margin-right: -3.7% !important;
 width: 90% !important;
 }
 .container {
-padding-left: 4.4%;
-padding-right: 4.4%;
-max-width: 1464px;
+max-width: 1464px !important;
 }
 }
