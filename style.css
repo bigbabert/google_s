@@ -691,9 +691,15 @@ margin: 5%;
 }
 }
 @media screen and (max-device-width: 1024px){
-    .sidebar {
+.sidebar {
 width: 25% !important;
     }
+main {
+max-width: 664px !important;
+}
+.editorial-header, .entry-content {
+width: 720px !important;
+}
 }
 @media screen and (max-device-width: 2560px){
 main {
