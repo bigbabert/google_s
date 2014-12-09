@@ -650,7 +650,7 @@ margin: 5%;
 }
 @media screen and (min-device-width: 414px){
 #gc-footer {
-margin-top: 100%;
+margin-top: 0 !important;
 }
 }
 @media screen and (max-device-width: 414px){
