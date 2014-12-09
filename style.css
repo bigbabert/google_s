@@ -677,6 +677,9 @@ display: none;
 width: 320px !important;
 max-width: 100%;
 }
+#gc-footer {
+margin-top: 140%;
+}
 textarea#comment {
 width: 110%;
 }
