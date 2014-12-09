@@ -565,7 +565,7 @@ margin-bottom: 20px !important;
 display: inline-block !important;
 }
 #gc-footer {
-margin-top: 200%;
+margin-top: 200% !important;
 }
 #comments {  
 width:80%;
