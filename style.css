@@ -648,7 +648,7 @@ margin-bottom: 40%;
 margin: 5%;
 }
 }
-@media screen and (min-device-width: 414px){
+@media screen and (min-device-width: 420px){
 #gc-footer {
 margin-top: 0 !important;
 }
