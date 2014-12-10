@@ -570,7 +570,7 @@ margin-top: 10%;
 #page-full, #no-sidebar {
 margin-top: 22%;
 }
-#page-full .editorial-header__subtitle, .woocommerce .editorial-header__subtitle {
+#page-full .editorial-header__subtitle, .woocommerce-page .editorial-header__subtitle {
 margin-bottom: 10%;
 }
 #gc-footer {
