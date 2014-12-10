@@ -1,12 +1,12 @@
-comments/*
+/*
 Theme Name: Google_S
 Theme URI: http://www.blog.altertech.it/google_s-wordpress-starter-theme-based-google-web-starter-kit/
 Author: Bigbabert
 Author URI: http://www.blog.altertech.it/author/alberto-cocchiara/
 Description: New Wordpress multipropose starter theme based on Google Web Starter Kit and Underscores & Bootstrap 3.0
-Version: 1.2.9
+Version: 1.3.0
 Template:         google_s
-Template Version: 1.2.9
+Template Version: 1.3.0
 GitHub Theme URI: https://github.com/bigbabert/google_s
 GitHub Branch:    google_s
 License: GNU General Public License v2 or later
@@ -564,8 +564,11 @@ margin-bottom: 20px !important;
         .sub-menu {
 display: inline-block !important;
 }
-.woocommerce main {
+.woocommerce main, .page #page-full, .page #no-sidebar, .page main {
 margin-top: 10%;
+}
+.editorial-header__subtitle {
+margin-bottom: 10%;
 }
 #gc-footer {
 margin-top: 220% !important;
