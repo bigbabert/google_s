@@ -564,8 +564,11 @@ margin-bottom: 20px !important;
         .sub-menu {
 display: inline-block !important;
 }
-.woocommerce main, .page #page-full, .page #no-sidebar, .page main {
+.woocommerce main, .page main {
 margin-top: 10%;
+}
+#page-full, #no-sidebar {
+margin-top: 22%;
 }
 .editorial-header__subtitle {
 margin-bottom: 10%;
