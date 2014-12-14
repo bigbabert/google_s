@@ -4,6 +4,20 @@
  *
  * @package Google_S
  */
+// Load main class
+if ( ! class_exists( 'GitHub_Updater' ) ) {
+	require 'inc/github-updater/class-github-updater.php';
+}
+
+// Instantiate class GitHub_Updater
+new GitHub_Updater;
+
+/**
+ * Calls GitHub_Updater::init() in init hook so other remote upgrader apps like
+ * InfiniteWP, ManageWP, MainWP, and iThemes Sync will load and use all
+ * of GitHub_Updater's methods, especially renaming.
+ */
+add_action( 'init', array( 'GitHub_Updater', 'init' ) );
 
 if ( ! function_exists( 'google_s_setup' ) ) :
     if ( ! isset( $content_width ) ) $content_width = 900;
