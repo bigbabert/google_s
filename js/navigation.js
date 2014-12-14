@@ -8,7 +8,7 @@ $('.sub-menu').hide();
 
    $('.menu-item-has-children').hover(function() {
 
-$(this).children('.sub-menu').css('display', 'inline-block').stop().slideToggle(200);
+$(this).children('.sub-menu').css('display', 'inline-block').stop().slideToggle(800);
 
 });
 })(jQuery);
