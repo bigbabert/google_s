@@ -710,7 +710,7 @@ margin-bottom: 40%;
 margin: 5%;
 }
 }
-@media screen and (max-device-width: 568px){
+@media screen and (max-device-width: 667px){
 a.logo {
 font-size: 14px !important;
     }
