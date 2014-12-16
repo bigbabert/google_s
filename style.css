@@ -204,6 +204,7 @@ display:inline-block;
 #nosidebar, #page-full {
 margin-left: 2.5%;
 margin-right: 2.5%;
+margin-top: 2.5%;
 }
 .vertical-image {
 	float:right;
