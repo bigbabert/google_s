@@ -4,11 +4,11 @@
  * Handles toggling the .sub-menuigation sub-menu.
  */
 (function($){
-$('.sub-menu').hide();
+$('ul.sub-menu').hide();
 
-   $('.menu-item-has-children').hover(function() {
+   $('li.menu-item-has-children').hover(function() {
 
-$(this).children('.sub-menu').css('display', 'inline-block').stop().slideToggle(800);
+$(this).children('ul.sub-menu').css('display', 'inline-block').stop().slideToggle(800);
 
 });
 })(jQuery);

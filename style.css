@@ -413,7 +413,6 @@ text-decoration: none;
                             width: 200px;
                             height: auto;
                         }
-			/* see gallery_shortcode() in wp-includes/media.php */
 .navigation.post-navigation {
 margin-bottom: 2%;
 width: 100%;
@@ -485,9 +484,6 @@ font-family:'Roboto Condensed','Helvetica','Arial',sans-serif !important;
     text-decoration:none;
     content:"";
 }
-.sub-menu ul {
-background-color: white !important;
-}
 .menu-item-has-children a::before  {
 font-family:"icons";
 font-size:18px;
@@ -500,13 +496,6 @@ line-height:60px;
 content:"\e002";
 color: white;
 }
-#site-navigation li a {
-    display: block;
-}
-#site-navigation li ul {
-    display: none; 
-}
- 
 h1.tag.editorial-header__title {
 width: 100%;
 }
