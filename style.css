@@ -4,9 +4,9 @@ Theme URI: http://www.blog.altertech.it/google_s-wordpress-starter-theme-based-g
 Author: Bigbabert
 Author URI: http://www.blog.altertech.it/author/alberto-cocchiara/
 Description: New Wordpress multipropose starter theme based on Google Web Starter Kit and Underscores & Bootstrap 3.0
-Version: 1.3.6
+Version: 1.3.7
 Template:         google_s
-Template Version: 1.3.6
+Template Version: 1.3.7
 GitHub Theme URI: https://github.com/bigbabert/google_s
 GitHub Branch:    master
 License: GNU General Public License v2 or later
@@ -570,8 +570,8 @@ margin-bottom: 20px !important;
         .sub-menu {
 display: block !important;
 }
-.woocommerce main, .page main {
-margin-top: 10%;
+.woocommerce main, .page main, .post-type-archive-product main, .tax-product_cat main {
+margin-top: 15%;
 }
 #page-full, #no-sidebar {
 margin-top: 22%;
@@ -580,7 +580,7 @@ margin-top: 22%;
 margin-bottom: 10%;
 }
 #gc-footer {
-margin-top: 220% !important;
+margin-top: 250% !important;
 }
 #comments {  
 width:80%;
@@ -648,8 +648,11 @@ display: none;
 width: 375px !important;
 max-width: 100%;
 }
+.woocommerce main, .page main, .post-type-archive-product main, .tax-product_cat main {
+margin-top: 15%;
+}
 #gc-footer {
-margin-top: 200%;
+margin-top: 250%;
 }
 textarea#comment {
 width: 110%;
@@ -696,6 +699,9 @@ margin-bottom: 20px !important;
     .sidebar input.search {
         display: block;
     }
+    .woocommerce main, .page main, .post-type-archive-product main, .tax-product_cat main {
+margin-top: 15%;
+}
     .sub-menu {
 display: block;
 }
