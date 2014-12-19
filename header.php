@@ -42,9 +42,13 @@
         <button class="menu"><img src="<?php echo get_template_directory_uri(); ?>/images/hamburger.svg" alt="Menu">
 		</button>
           <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+    <?php if ( get_theme_mod( 'google_s_logo' ) ) : ?>
+	<img src="<?php echo esc_url( get_theme_mod( 'google_s_logo' ) ); ?>" alt="<?php echo bloginfo( 'name' ); ?>"></a>
+    <?php else : ?>
 		<h1 class=logo>
      <strong><?php bloginfo( 'name' ); ?> </strong><legend> <?php bloginfo( 'description' ); ?></legend>
                 </h1>
+    <?php endif; ?>
 			</a>
 		
 <section class="app-bar-actions">
@@ -56,9 +60,9 @@
 <?php wp_nav_menu( array( 'theme_location' => 'primary','container_class' => '',  'menu_class' => '')); ?>
 </nav>
          <?php if (is_page_template('page-full.php') || is_page_template('page-style-guide.php') ):?>
-    <div id="page-full" >
+    <main> <div id="page-full" >
       <?php elseif ( is_active_sidebar( 'sidebar-1' )  ) : ?>
         <main id="left-content"  class="g-wide--3 g-medium--half" > 
     <?php else : ?> 
-    <div id="no-sidebar">
+    <main> <div id="no-sidebar">
         <?php endif; ?>

@@ -11,8 +11,9 @@ Google_S Wordpress Starter Theme
 <p>Google_S Wordpress Starter Theme is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc. and
 also on Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google.</p> 
 
-For the time being a starter Theme there are no major features, for now we are limited, as well as to include the necessary files to the Google Web Starter Kit, a few functions:
+<p>For the time being a starter Theme there are no major features, for now we are limited, as well as to include the necessary files to the Google Web Starter Kit, a few functions:</p>
 <ul>
+<li> Custom logo Uploader in Customizer. </li>
 <li> Various sizes for the thumbnails. </li>
 <li> A graphic grid for Media Galleries. </li>
 <li> A custom field to insert text before the image featured in posts and pages. </li>
@@ -24,9 +25,12 @@ For the time being a starter Theme there are no major features, for now we are l
 <li> Custom Login Logo. </li>
 <li> Custom Home Blog Template. </li>
 <li> Update Theme via GitHub without plugin. </li>
+<li> Support for title tag Wordpress 4.1. </li>
 </ul>
 
-Try our new starter this theme completely responsive and SEO friendly, Google_S made based on Google Web Starter Kit (Node.js, Sass, Gulp). We would be extremely grateful for feedback, reports or suggestions.
+<p>Try our new starter this theme completely responsive and SEO friendly, Google_S made based on Google Web Starter Kit (Node.js, Sass, Gulp).</p> <p>We would be extremely grateful for feedback, reports or suggestions.</p>
+
+<p>Google_S Theme is tested up to Wordpress 4.1 and Woocommerce 2.2.10.</p>
 
 <img src="https://raw.githubusercontent.com/bigbabert/google_s/master/screenshot.png">
 

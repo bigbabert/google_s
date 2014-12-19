@@ -39,6 +39,7 @@ function google_s_setup() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
+        add_theme_support( 'title-tag' );
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
