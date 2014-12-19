@@ -4,27 +4,24 @@
  *
  * @package Google_S
  */
-// Load main class
+
+// Load main class for Git Updater
 if ( ! class_exists( 'GitHub_Updater' ) ) {
 	require 'inc/github-updater/class-github-updater.php';
 }
-
 // Instantiate class GitHub_Updater
 new GitHub_Updater;
-
 /**
  * Calls GitHub_Updater::init() in init hook so other remote upgrader apps like
  * InfiniteWP, ManageWP, MainWP, and iThemes Sync will load and use all
  * of GitHub_Updater's methods, especially renaming.
  */
 add_action( 'init', array( 'GitHub_Updater', 'init' ) );
-
-if ( ! function_exists( 'google_s_setup' ) ) :
-    if ( ! isset( $content_width ) ) $content_width = 900;
-
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  */
+  if ( ! function_exists( 'google_s_setup' ) ) :
+    if ( ! isset( $content_width ) ) $content_width = 900;
 
 function google_s_setup() {
 
@@ -38,28 +35,24 @@ function google_s_setup() {
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
-
+	// Add support for title tag.
         add_theme_support( 'title-tag' );
+	// Add support for Woocommerce.
+        add_theme_support( 'woocommerce' );
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
 if ( function_exists( 'add_theme_support' ) ) { 
     add_theme_support( 'post-thumbnails' );
     set_post_thumbnail_size( 280, 210, true ); // Normal post thumbnails
     add_image_size( 'screen-shot', 720, 540 ); // Full size screen
-}
-/**
- * Declare Woocommerce Theme support;
- */
-        add_theme_support( 'woocommerce' );
+    }
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'google_s' ),
 	) );
-
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -67,7 +60,6 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
 	) );
-
 	/*
 	 * Enable support for Post Formats.
 	 * See http://codex.wordpress.org/Post_Formats
@@ -75,17 +67,17 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-formats', array(
 		'aside', 'image', 'video', 'quote', 'link',
 	) );
-
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'google_s_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
-endif; // google_s_setup
-add_action( 'after_setup_theme', 'google_s_setup' );
-
+endif; 
+        // google_s_setup
+        add_action( 'after_setup_theme', 'google_s_setup' );
 /**
+ * This theme have two sidebars one on the Right and one at the top of the footer.
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
@@ -111,7 +103,10 @@ function google_s_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'google_s_widgets_init' );
-function widget_first_last_classes($params) {
+/**
+ * Add "first" and "last" CSS classes to dynamic sidebar widgets. Also adds numeric index class for each widget (widget-1, widget-2, etc.)
+ */
+function widget_first_last_class($params) {
 
 	global $my_widget_num; // Global a counter array
 	$this_id = $params[0]['id']; // Get the id for the current sidebar we're processing
@@ -144,15 +139,15 @@ function widget_first_last_classes($params) {
 	return $params;
 
 }
-add_filter('dynamic_sidebar_params','widget_first_last_classes');
-/**
- * Enqueue scripts and styles.
- */
+add_filter('dynamic_sidebar_params','widget_first_last_class');
+// Add custom editor support
    function google_s_add_editor_styles() {
     add_editor_style( 'custom-editor-style.css' );
 }
 add_action( 'after_setup_theme', 'google_s_add_editor_styles' );
-
+/**
+ * Enqueue scripts and styles.
+ */
 function google_s_scripts() {
 	wp_enqueue_style( 'google_s-style', get_stylesheet_uri() );
         
