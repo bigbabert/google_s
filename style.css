@@ -193,6 +193,9 @@ margin-top: 5%;
 max-height: 140px !important;
 max-width: 380px !important;
 }
+span.post-meta-key {
+display: none !important;
+}
 #submit {
 	display:inline-block;
 	padding:12px 32px;
