@@ -325,17 +325,36 @@ color: white;
 h1.tag.editorial-header__title {
 width: 100%;
 }
-.editorial-header__subtitle a, .editorial-header__subtitle a:hover, .editorial-header__subtitle a:focus, .editorial-header__subtitle a:visited {
+.editorial-header__subtitle a, .editorial-header__subtitle a:hover, .editorial-header__subtitle a:focus, .editorial-header__subtitle a:visited, .posted-on a:hover, .posted-on i.icon.icon-user-input, .posted-on i.icon.icon-user-input:hover, .posted-on i.icon.icon-user-input:focus, .posted-on i.icon.icon-user-input:visited, .posted-on i.icon.icon-user-input:active, .posted-on a:focus, .posted-on a:active, .posted-on a:visited {
 color: #06e;
 }
 .tag::before {
 content: "" !important;
 }
+.posted-on time.entry-date.published:hover, .posted-on time.updated, .posted-on time.updated:hover, .posted-on time.updated:focus, .posted-on time.updated:visited, .posted-on time.updated:active, .posted-on time.entry-date.published, .posted-on time.entry-date.published:focus, .posted-on time.entry-date.published:visited, .posted-on time.entry-date.published:active {
+color: #001114 !important;
+}
 .posted-on span.icon-circle.themed--background {
 background: #297ea9;
 display: inline;
 margin-right: 2%;
-position: relative;top: -5px;
+position: relative;
+top: -5px;
+}
+.posted-on .icon-circle {
+padding: 12px !important
+}
+.posted-on .icon-circle i {
+font-size: 16px !important;
+}
+.posted-on i.icon.icon-lessons, .posted-on i.icon.icon-user-input {
+margin-left:7px;
+margin-right: 3px;
+}
+.posted-on i.icon.icon-menu {
+margin-top: 3px;
+margin-left:7px;
+margin-right: 3px;
 }
  h3.sd-title {
  font-size: 22px !important;
