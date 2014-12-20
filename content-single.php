@@ -14,8 +14,10 @@
 <?php if ( get_post_meta( get_the_ID(), 'meta-textarea', true ) ) : ?>
 <p class="editorial-header__excerpt "><ol class="list-anchor list-large"><?php the_meta('meta-textarea'); ?></ol></p>
 <?php endif; ?>
-<p class="featured-image-borded"><?php the_post_thumbnail( 'large' ); ?></p>
-<?php if ( has_post_format( 'quote' ) ) : ?>
+    <?php if ( has_post_thumbnail() ) : ?>
+                        <p class="featured-image-borded"><?php the_post_thumbnail( 'large' ); ?></p>
+<?php endif; ?>
+    <?php if ( has_post_format( 'quote' ) ) : ?>
 <section class="styleguide__quote"><div class="quote"><div class="container"><blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">
 	<?php the_content(); ?>
 	</blockquote></div></div></section><!-- .entry-content -->
