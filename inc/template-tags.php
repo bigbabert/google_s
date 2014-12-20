@@ -70,7 +70,7 @@ if ( ! function_exists( 'google_s_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function google_s_posted_on() {
-	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+	$time_string = '<span class="icon-less"><i class="icon icon-lessons"></i> <time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<span class="icon-less"><i class="icon icon-lessons"></i> <time class="entry-date published" datetime="%1$s">%2$s</time> <i class="icon icon-menu"></i> <time class="updated" datetime="%3$s">%4$s</time></span>';
 	}
