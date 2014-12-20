@@ -83,7 +83,7 @@ function google_s_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'google_s' ),
+		_x( '<strong>Post info:</strong> %s', 'post date', 'google_s' ),
 		' <a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -107,13 +107,13 @@ function google_s_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'google_s' ) );
 		if ( $categories_list && google_s_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'google_s' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links">' . __( '<i class="icon icon-introduction-to-media"></i> <strong>Category:</strong> %1$s', 'google_s' ) . '</span>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'google_s' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tag:  %1$s', 'google_s' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links">' . __( '<i class="icon icon-hash"></i> <strong>Tag:</strong>  %1$s', 'google_s' ) . '</span>', $tags_list );
 		}
 	}
 

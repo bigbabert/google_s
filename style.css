@@ -4,9 +4,9 @@ Theme URI: http://www.blog.altertech.it/google_s-wordpress-starter-theme-based-g
 Author: Bigbabert
 Author URI: http://www.blog.altertech.it/author/alberto-cocchiara/
 Description: New Wordpress multipropose starter theme based on Google Web Starter Kit and Underscores & Bootstrap 3.0. Google_S is tested up to Wordpress 4.1 and Woocommerce 2.2.10.
-Version: 1.4.4
+Version: 1.4.5
 Template:         google_s
-Template Version: 1.4.4
+Template Version: 1.4.5
 GitHub Theme URI: https://github.com/bigbabert/google_s
 GitHub Branch:    master
 License: GNU General Public License v2 or later
@@ -325,7 +325,8 @@ color: white;
 h1.tag.editorial-header__title {
 width: 100%;
 }
-.editorial-header__subtitle a, .editorial-header__subtitle a:hover, .editorial-header__subtitle a:focus, .editorial-header__subtitle a:visited, .posted-on a:hover, .posted-on i.icon.icon-user-input, .posted-on i.icon.icon-user-input:hover, .posted-on i.icon.icon-user-input:focus, .posted-on i.icon.icon-user-input:visited, .posted-on i.icon.icon-user-input:active, .posted-on a:focus, .posted-on a:active, .posted-on a:visited {
+.cat-links i.icon.icon-introduction-to-media
+.editorial-header__subtitle a, .editorial-header__subtitle a:hover, .editorial-header__subtitle a:focus, .editorial-header__subtitle a:visited, .posted-on a:hover, .posted-on i.icon.icon-user-input, .posted-on i.icon.icon-user-input:hover, .posted-on i.icon.icon-user-input:focus, .posted-on i.icon.icon-user-input:visited, .posted-on i.icon.icon-user-input:active, .posted-on a:focus, .posted-on a:active, .posted-on a:visited, .cat-links i.icon.icon-introduction-to-media, .cat-links i.icon.icon-introduction-to-media:hover, .cat-links i.icon.icon-introduction-to-media:focus, .cat-links i.icon.icon-introduction-to-media:active, .cat-links i.icon.icon-introduction-to-media:visited, .tags-links i.icon.icon-hash, .tags-links i.icon.icon-hash:hover, .tags-links i.icon.icon-hash:focus, .tags-links i.icon.icon-hash:visited, .tags-links i.icon.icon-hash:active {
 color: #06e;
 }
 .tag::before {
@@ -353,6 +354,11 @@ margin-right: 3px;
 }
 .posted-on i.icon.icon-menu {
 margin-top: 3px;
+margin-left:7px;
+margin-right: 3px;
+}
+.cat-links i.icon.icon-introduction-to-media, .tags-links i.icon.icon-hash {
+margin-top: 5px;
 margin-left:7px;
 margin-right: 3px;
 }
