@@ -44,4 +44,4 @@ Use it to make something cool, have fun, and share what you've learned with othe
 also on Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google.</p> 
 
 <p>Resetting and rebuilding styles have been helped along thanks to the fine work of
-Google Web Starter Kit and Bootstrap 3.0</p>
+Google Web Starter Kit & Underscores</p>
