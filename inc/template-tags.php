@@ -6,6 +6,34 @@
  *
  * @package Google_S
  */
+if ( ! function_exists( 'google_s_comment_nav' ) ) :
+/**
+ * Display navigation to next/previous comments when applicable.
+ *
+ * @since Twenty Fifteen 1.0
+ */
+function google_s_comment_nav() {
+	// Are there comments to navigate through?
+	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
+	?>
+	<nav class="navigation comment-navigation" role="navigation">
+		<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'google_s' ); ?></h2>
+		<div class="nav-links">
+			<?php
+				if ( $prev_link = get_previous_comments_link( __( 'Older Comments', 'google_s' ) ) ) :
+					printf( '<div class="nav-previous">%s</div>', $prev_link );
+				endif;
+
+				if ( $next_link = get_next_comments_link( __( 'Newer Comments', 'google_s' ) ) ) :
+					printf( '<div class="nav-next">%s</div>', $next_link );
+				endif;
+			?>
+		</div><!-- .nav-links -->
+	</nav><!-- .comment-navigation -->
+	<?php
+	endif;
+}
+endif;
 
 if ( ! function_exists( 'google_s_paging_nav' ) ) :
 /**
@@ -113,7 +141,7 @@ function google_s_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'google_s' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( '<i class="icon icon-hash"></i> <strong>Tag:</strong>  %1$s', 'google_s' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links">' . __( '<i class="icon icon-hash"></i> <strong>Tag:</strong>  %1$s', 'google_s' ) . '</span></br>', $tags_list );
 		}
 	}
 
