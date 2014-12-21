@@ -4,9 +4,9 @@ Theme URI: http://www.blog.altertech.it/google_s-wordpress-starter-theme-based-g
 Author: Bigbabert
 Author URI: http://www.blog.altertech.it/author/alberto-cocchiara/
 Description: New Wordpress multipropose starter theme based on Google Web Starter Kit and Underscores & Bootstrap 3.0. Google_S is tested up to Wordpress 4.1 and Woocommerce 2.2.10.
-Version: 1.4.6
+Version: 1.4.7
 Template:         google_s
-Template Version: 1.4.6
+Template Version: 1.4.7
 GitHub Theme URI: https://github.com/bigbabert/google_s
 GitHub Branch:    master
 License: GNU General Public License v2 or later
@@ -381,7 +381,7 @@ color: whitesmoke;
 width: 250px;
 max-width: 400px;
 height: 50px;
-line-height: 1.9;
+line-height: 30px;
 max-height: 50px;
 overflow:hidden;
 }
@@ -452,8 +452,117 @@ border-top: 1px solid #ccc;
 	display: block;
 	font-weight: 700;
 }
+/**
+ * 1.6 Navigation
+ * ----------------------------------------------------------------------------
+ */
+#mobile-menu, .navdrawer-container {
+display: none !important;
+}
+.main-navigation {
+clear: both;
+margin: 0 auto;
+max-width: 100%;
+min-height: 60px;
+position: relative;
+background-color: #3367D6;
+}
+
+ul.nav-menu,
+div.nav-menu > ul {
+margin: 0;
+padding: 0 40px 0 0;
+padding-left: 10%;
+}
+
+.nav-menu li {
+	display: inline-block;
+	position: relative;
+        padding-left: 0 !important;
+}
+
+.nav-menu li a {
+	color: #fff;
+	display: block;
+	font-size: 18px;
+	padding: 15px 20px;
+	text-decoration: none;
+}
+
+.nav-menu li:hover > a,
+.nav-menu li a:hover,
+.nav-menu li:focus > a,
+.nav-menu li a:focus {
+	background-color:rgba(255,255,255,.2);
+	color: #fff;
+}
+
+.nav-menu .sub-menu,
+.nav-menu .children {
+	background-color: #3367D6;
+	border: 2px solid #f7f5e7;
+	border-top: 0;
+	padding: 0;
+	position: absolute;
+	left: -2px;
+	z-index: 99999;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.nav-menu .sub-menu ul,
+.nav-menu .children ul {
+	border-left: 0;
+	left: 100%;
+	top: 0;
+}
+
+ul.nav-menu ul a,
+.nav-menu ul ul a {
+	color: #fff;
+	margin: 0;
+	width: 200px;
+}
+
+ul.nav-menu ul a:hover,
+.nav-menu ul ul a:hover,
+ul.nav-menu ul a:focus,
+.nav-menu ul ul a:focus {
+	background-color:rgba(255,255,255,.2);
+}
+
+ul.nav-menu li:hover > ul,
+.nav-menu ul li:hover > ul,
+ul.nav-menu .focus > ul,
+.nav-menu .focus > ul {
+	clip: inherit;
+	overflow: inherit;
+	height: inherit;
+	width: inherit;
+}
+
+.nav-menu .current_page_item > a,
+.nav-menu .current_page_ancestor > a,
+.nav-menu .current-menu-item > a,
+.nav-menu .current-menu-ancestor > a {
+	color: #fff;
+}
+
+.menu-toggle {
+	display: none;
+}
+
+/* Navbar */
+.navbar {
+	background-color: #3367D6;
+	margin: 0 auto;
+	max-width: 1600px;
+	width: 100%;
+}
 /*--------------------------------------------------------------
-1.6 Comments Styling
+1.7 Comments Styling
 --------------------------------------------------------------*/
 .comment-reply-title small a:before,
 .comment-navigation .nav-next a:after,
@@ -878,9 +987,15 @@ border-top: 1px solid #ccc;
 	top: -3px;
 }
 /*---------------------------------------------
-1.7 Tablet Media Query
+1.8 Tablet Media Query
 --------------------------------------------------------------*/
 @media screen and (max-device-width: 966px){
+    #mobile-menu, .navdrawer-container {
+display: block !important;
+}
+.navigation, .main-navigation {
+display: none !important;
+}
     .app-bar .logo {
     font-size: 28px !important;
     line-height: 30px !important;
@@ -893,7 +1008,7 @@ border-top: 1px solid #ccc;
     }
 }
 /*--------------------------------------------------------------
-1.8 Phone Media Query
+1.9 Phone Media Query
 --------------------------------------------------------------*/
 @media screen and (max-device-width: 480px){
     .app-bar-actions input#s.search {

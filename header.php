@@ -58,8 +58,11 @@
 </section>
 </div>
 </header>
-<nav id="site-navigation" class="navdrawer-container promote-layer" role="navigation">
-<?php wp_nav_menu( array( 'theme_location' => 'primary','container_class' => '',  'menu_class' => '')); ?>
+<nav id="site-navigation mobile-menu" class="navdrawer-container promote-layer" role="navigation">
+<?php wp_nav_menu( array( 'theme_location' => 'primary','menu_class' => '')); ?>
+</nav>
+<nav id="site-navigation" class="navigation main-navigation" role="navigation">
+<?php wp_nav_menu( array( 'theme_location' => 'primary','menu_class' => 'nav-menu')); ?>
 </nav>
          <?php if (is_page_template('page-full.php') || is_page_template('page-style-guide.php') ):?>
     <main> <div id="page-full" >

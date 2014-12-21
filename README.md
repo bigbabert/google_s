@@ -21,7 +21,7 @@ also on Google Web Starter Kit https://developers.google.com/web/starter-kit/, G
 <li> Footer Sidebar with default content. </li>
 <li> Lightbox for images with link media and slide for tunnels. </li>
 <li> A simple dropdown for sub-menu. </li>
-<li> Support for WooCommerce. </li>
+<li> Supportp for WooCommerce. </li>
 <li> Custom Login Logo. </li>
 <li> Custom Home Blog Template. </li>
 <li> Update Theme via GitHub without plugin. </li>
