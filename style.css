@@ -993,8 +993,8 @@ ul.nav-menu .focus > ul,
     #mobile-menu, .navdrawer-container {
 display: block !important;
 }
-.navigation, .main-navigation {
-display: none !important;
+.main-navigation {
+,display: none !important;
 }
     .app-bar .logo {
     font-size: 28px !important;
