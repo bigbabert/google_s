@@ -13,19 +13,20 @@ also on Google Web Starter Kit https://developers.google.com/web/starter-kit/, G
 
 <p>For the time being a starter Theme there are no major features, for now we are limited, as well as to include the necessary files to the Google Web Starter Kit, a few functions:</p>
 <ul>
-<li> Custom logo Uploader in Customizer. </li>
-<li> Various sizes for the thumbnails. </li>
-<li> A graphic grid for Media Galleries. </li>
-<li> A custom field to insert text before the image featured in posts and pages. </li>
-<li> Right Sidebar. </li>
-<li> Footer Sidebar with default content. </li>
-<li> Lightbox for images with link media and slide for tunnels. </li>
-<li> A simple dropdown for sub-menu. </li>
-<li> Supportp for WooCommerce. </li>
-<li> Custom Login Logo. </li>
-<li> Custom Home Blog Template. </li>
-<li> Update Theme via GitHub without plugin. </li>
-<li> Support for title tag Wordpress 4.1. </li>
+	<li>Custom logo Uploader in Customizer.</li>
+	<li>Various sizes for the thumbnails.</li>
+	<li>A graphic grid for Media Galleries.</li>
+	<li>A custom field to insert text before the image featured in posts and pages.</li>
+	<li>Right Sidebar.</li>
+	<li>Footer Sidebar with default content.</li>
+	<li>Responsive Lightbox for images with link media and slide for galleries.</li>
+	<li>A simple dropdown for sub-menu.</li>
+	<li>Support for WooCommerce.</li>
+	<li>Custom Login Logo.</li>
+	<li>Custom Home Blog Template.</li>
+	<li>Custom Landing Page Template.</li>
+	<li>Update Theme via GitHub without install any plugin.</li>
+	<li>Support for title tag Wordpress 4.1.</li>
 </ul>
 
 <p>Try our new starter this theme completely responsive and SEO friendly, Google_S made based on Google Web Starter Kit (Node.js, Sass, Gulp).</p> <p>We would be extremely grateful for feedback, reports or suggestions.</p>
