@@ -17,7 +17,7 @@
 </main>
 <div class="clear"></div>
 <!-- #content -->
-<section class="styleguide__centered-list feature-spotlight g-medium--full g-wide--full" >
+<section class="styleguide__centered-list feature-spotlight g-medium--full g-wide--full" id="sidebar-2">
     <div class="container">
 	<ul class="list-guides-intro list-centered list--reset clear"><?php dynamic_sidebar( 'sidebar-2' ); ?></ul>
 	</div>

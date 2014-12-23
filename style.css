@@ -4,9 +4,9 @@ Theme URI: http://www.blog.altertech.it/google_s-wordpress-starter-theme-based-g
 Author: Bigbabert
 Author URI: http://www.blog.altertech.it/author/alberto-cocchiara/
 Description: New Wordpress multipropose starter theme based on Google Web Starter Kit and Underscores & Bootstrap 3.0. Google_S is tested up to Wordpress 4.1 and Woocommerce 2.2.10.
-Version: 1.4.8
+Version: 1.4.9
 Template:         google_s
-Template Version: 1.4.8
+Template Version: 1.4.9
 GitHub Theme URI: https://github.com/bigbabert/google_s
 GitHub Branch:    master
 License: GNU General Public License v2 or later
@@ -18,7 +18,7 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
 Google_S is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc. and
-also on Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google 
+also on Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google Inc. 
 
 Resetting and rebuilding styles have been helped along thanks to the fine work of
 Google Web Starter Kit and Bootstrap 3.0 mixed by Bigbabert
@@ -26,7 +26,6 @@ Google Web Starter Kit and Bootstrap 3.0 mixed by Bigbabert
 /*--------------------------------------------------------------
 1.0 Media
 --------------------------------------------------------------*/
-
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
@@ -240,7 +239,7 @@ font-weight: 600 !important;
 margin-top: -12px !important;
 font-size: 26px !important;
 }
-#nosidebar .sidebar, .page-template-page-full-php .sidebar {
+#nosidebar .sidebar, .page-template-page-full-php .sidebar, .page-template-page-landing-php #sidebar-2, .page-template-page-landing-php .sidebar  {
 display: none !important;
 }
 .sidebar {
@@ -371,6 +370,7 @@ margin-right: 3px;
 .nav-next a, .nav-previous a {
 display: block;
 padding: 2.5%;
+padding-top: 5%;
 padding-bottom: 7%;
 background-color: #89c4e2;
 font-size: 18px;
@@ -994,7 +994,7 @@ ul.nav-menu .focus > ul,
 display: block !important;
 }
 .main-navigation {
-,display: none !important;
+display: none !important;
 }
     .app-bar .logo {
     font-size: 28px !important;
@@ -1027,6 +1027,14 @@ display: block !important;
     .logo legend {
     display: none;
     }
+    	.widget_calendar td,
+	.widget_calendar th {
+		line-height: 2.9286;
+	}
+
+	.widget_calendar caption {
+		margin: 0 0 1.5em;
+	}
     .sidebar {
         width: 100%;
         padding-left: 5%;

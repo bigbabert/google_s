@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Template Full Width
+ * Template Name: Template Landing Page
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -14,14 +14,7 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'page-full' ); ?>
-
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-				?>
+				<?php get_template_part( 'content', 'page-landing' ); ?>
 
 			<?php endwhile; // end of the loop. ?>
 <?php get_footer(); ?>

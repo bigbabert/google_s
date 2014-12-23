@@ -33,6 +33,9 @@
     <meta name="msapplication-TileColor" content="#3372DF">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<!--[if lt IE 9]>
+	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
+	<![endif]-->
 <script>(function(){document.documentElement.className='js'})();</script>
 <?php wp_head(); ?>
 </head>
@@ -64,9 +67,11 @@
 <nav id="site-navigation" class="navigation main-navigation" role="navigation">
 <?php wp_nav_menu( array( 'theme_location' => 'primary','menu_class' => 'nav-menu')); ?>
 </nav>
-         <?php if (is_page_template('page-full.php') || is_page_template('page-style-guide.php') ):?>
+         <?php if (is_page_template('page-full.php') ):?>
     <main> <div id="page-full" >
-      <?php elseif ( is_active_sidebar( 'sidebar-1' )  ) : ?>
+         <?php elseif ( is_page_template('page-style-guide.php') || is_page_template('page-landing.php')): ?>
+            <div id="page-landing" >
+<?php elseif ( is_active_sidebar( 'sidebar-1' )  ) : ?>
         <main id="left-content"  class="g-wide--3 g-medium--half" > 
     <?php else : ?> 
     <main> <div id="no-sidebar">
