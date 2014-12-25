@@ -98,9 +98,9 @@ if ( ! function_exists( 'google_s_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function google_s_posted_on() {
-	$time_string = '<span class="icon-less"><i class="icon icon-lessons"></i> <time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+	$time_string = '<span><i class="mdi-notification-event-available"></i> <time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<span class="icon-less"><i class="icon icon-lessons"></i> <time class="entry-date published" datetime="%1$s">%2$s</time> <i class="icon icon-menu"></i> <time class="updated" datetime="%3$s">%4$s</time></span>';
+		$time_string = '<span ><i class="mdi-notification-event-available"></i><time class="entry-date published" datetime="%1$s">%2$s</time> <i class="mdi-notification-sync"></i> <time class="updated" datetime="%3$s">%4$s</time></span>';
 	}
 
 	$time_string = sprintf( $time_string,
@@ -116,11 +116,11 @@ function google_s_posted_on() {
 	);
 
 	$byline = sprintf(
-		_x( 'by %s', 'post author', 'google_s' ),
+		_x( '%s', 'post author', 'google_s' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a>'
 	);
 
-	echo '<span class="posted-on"><span class="icon-circle themed--background"><i class="icon icon-multi-device-layouts"></i></span>' . $posted_on . '<i class="icon icon-user-input"></i> <span class="byline"> ' . $byline . '</span></span>';
+	echo '<span class="posted-on"><span class="icon-circle themed--background"><i class="mdi-notification-event-note"></i></span>' . $posted_on . '<i class="mdi-social-person"></i> <span class="byline"> ' . $byline . '</span></span>';
 
 }
 endif;
@@ -135,13 +135,13 @@ function google_s_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'google_s' ) );
 		if ( $categories_list && google_s_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( '<i class="icon icon-introduction-to-media"></i> <strong>Category:</strong> %1$s', 'google_s' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links">' . __( '<i class="mdi-action-group-work"></i> <strong>Category:</strong> %1$s', 'google_s' ) . '</span>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'google_s' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( '<i class="icon icon-hash"></i> <strong>Tag:</strong>  %1$s', 'google_s' ) . '</span></br>', $tags_list );
+			printf( '<span class="tags-links">' . __( '<i class="mdi-action-loyalty"></i> <strong>Tag:</strong>  %1$s', 'google_s' ) . '</span></br>', $tags_list );
 		}
 	}
 
@@ -151,7 +151,7 @@ function google_s_entry_footer() {
 		echo '</span>';
 	}
 
-	edit_post_link( __( 'Edit', 'google_s' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( __( 'Edit Post', 'google_s' ), '<span class="edit-link button--secondary"><i class="mdi-content-create"></i>', '</span>' );
 }
 endif;
 

@@ -12,47 +12,32 @@
  */
 
 get_header(); ?>
+<?php // WP_Query arguments
+$args = array (
+	'pagination'             => true
+);
 
+// The Query
+$query = new WP_Query( $args );
 
-<?php 
-        /* The loop: the_post retrieves the content
-         * of the new Page you created to list the posts,
-         * e.g., an intro describing the posts shown listed on this Page..
-         */
-     
+// The Loop
+if ( $query->have_posts($args) ) {
+	while ( $query->have_posts() ) {
+		$query->the_post();
+                    /*
+                     * Include the post format-specific template for the content. If you want to
+                     * use this in a child theme, then include a file called called content-___.php
+                     * (where ___ is the post format) and that will be used instead.
+                     */                
+		get_template_part( 'content-blog', get_post_format() );
+	}
+     google_s_paging_nav();
+} else {
+	get_template_part( 'content', 'none' );
+}
 
-        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-
-        $args = array(
-            // Change these category SLUGS to suit your use.
-          'category_name' => '', 
-          'paged' => $paged
-        );
-
-        $list_of_posts = new WP_Query( $args );
-        ?>
-        <?php if ( $list_of_posts->have_posts() ) : ?>
-			<?php /* The loop */ ?>
-			<?php while ( $list_of_posts->have_posts() ) : $list_of_posts->the_post(); ?>
-
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
-
-			<?php endwhile; ?>
-<div class="container nav-container">
-			<?php google_s_paging_nav(); ?>
-</div>
-		<?php else : ?>
-
-			<?php get_template_part( 'content', 'none' ); ?>
-
-		<?php endif; ?>
-<!-- #primary -->
-
+// Restore original Post Data
+wp_reset_postdata();
+?>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

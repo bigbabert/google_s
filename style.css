@@ -4,9 +4,9 @@ Theme URI: http://www.blog.altertech.it/google_s-wordpress-starter-theme-based-g
 Author: Bigbabert
 Author URI: http://www.blog.altertech.it/author/alberto-cocchiara/
 Description: New Wordpress multipropose starter theme based on Google Web Starter Kit and Underscores & Bootstrap 3.0. Google_S is tested up to Wordpress 4.1 and Woocommerce 2.2.10.
-Version: 1.4.9
+Version: 1.5.0
 Template:         google_s
-Template Version: 1.4.9
+Template Version: 1.5.0
 GitHub Theme URI: https://github.com/bigbabert/google_s
 GitHub Branch:    master
 License: GNU General Public License v2 or later
@@ -324,8 +324,8 @@ color: white;
 h1.tag.editorial-header__title {
 width: 100%;
 }
-.cat-links i.icon.icon-introduction-to-media
-.editorial-header__subtitle a, .editorial-header__subtitle a:hover, .editorial-header__subtitle a:focus, .editorial-header__subtitle a:visited, .posted-on a:hover, .posted-on i.icon.icon-user-input, .posted-on i.icon.icon-user-input:hover, .posted-on i.icon.icon-user-input:focus, .posted-on i.icon.icon-user-input:visited, .posted-on i.icon.icon-user-input:active, .posted-on a:focus, .posted-on a:active, .posted-on a:visited, .cat-links i.icon.icon-introduction-to-media, .cat-links i.icon.icon-introduction-to-media:hover, .cat-links i.icon.icon-introduction-to-media:focus, .cat-links i.icon.icon-introduction-to-media:active, .cat-links i.icon.icon-introduction-to-media:visited, .tags-links i.icon.icon-hash, .tags-links i.icon.icon-hash:hover, .tags-links i.icon.icon-hash:focus, .tags-links i.icon.icon-hash:visited, .tags-links i.icon.icon-hash:active {
+.cat-links i.mdi-action-group-work
+.editorial-header__subtitle a, .editorial-header__subtitle a:hover, .editorial-header__subtitle a:focus, .editorial-header__subtitle a:visited, .posted-on a:hover, .posted-on i.mdi-notification-sync, .posted-on i.mdi-social-person, .posted-on i.mdi-social-person:hover,  .posted-on i.mdi-social-person:focus, .posted-on i.mdi-social-person:visited, .posted-on i.mdi-social-person:active, .posted-on i.mdi-notification-sync:hover, .posted-on i.mdi-notification-sync:focus, .posted-on i.mdi-notification-sync:visited, .posted-on i.mdi-notification-sync:active, .posted-on a:focus, .posted-on a:active, .posted-on a:visited, .cat-links i.mdi-action-group-work, .cat-links i.mdi-action-group-work:hover, .cat-links i.mdi-action-group-work:focus, .cat-links i.mdi-action-group-work:active, .cat-links i.mdi-action-group-work:visited, .tags-links i.mdi-action-loyalty, .tags-links i.mdi-action-loyalty:hover, .tags-links i.mdi-action-loyalty:focus, .tags-links i.mdi-action-loyalty:visited, .tags-links i.mdi-action-loyalty:active {
 color: #06e;
 }
 .tag::before {
@@ -347,19 +347,21 @@ padding: 12px !important
 .posted-on .icon-circle i {
 font-size: 16px !important;
 }
-.posted-on i.icon.icon-lessons, .posted-on i.icon.icon-user-input {
+.posted-on i.mdi-notification-event-available, .posted-on i.mdi-social-person, .posted-on i.mdi-notification-sync, .cat-links i.mdi-action-group-work, .tags-links i.mdi-action-loyalty {
+position: relative;
+top: 5px;
 margin-left:7px;
 margin-right: 3px;
 }
-.posted-on i.icon.icon-menu {
-margin-top: 3px;
-margin-left:7px;
-margin-right: 3px;
+.edit-link i.mdi-content-create {
+position: relative;
+top: 5px;
+margin-left:3px;
+margin-right: 7px;
 }
-.cat-links i.icon.icon-introduction-to-media, .tags-links i.icon.icon-hash {
-margin-top: 5px;
-margin-left:7px;
-margin-right: 3px;
+span.edit-link {
+margin-top: 35px;
+margin-bottom: 35px;
 }
  h3.sd-title {
  font-size: 22px !important;
@@ -368,7 +370,7 @@ margin-right: 3px;
  font: 400 32px/1 Genericons !important;
  }
 .nav-next a, .nav-previous a {
-display: block;
+display: inline-block;
 padding: 2.5%;
 padding-top: 5%;
 padding-bottom: 7%;
@@ -395,21 +397,20 @@ color: white;
 .paging-navigation h1.screen-reader-text {
  display: none;
 }
-.paging-navigation div.nav-links {
-width: 100%;
-margin-top: 2%;
+div.nav-previous {
+display: block;
+float: left;
 }
-.paging-navigation div.nav-previous {
- margin-left: 4%;   
-}
-.paging-navigation div.nav-next {
- margin-right: 8%;
+div.nav-next {
+display: block;
+float: right;
+margin-left: 20px;
 }
 textarea#comment {
 max-width: 800px;
 width: 600px;
 }
-.site-info a, .site-info a:hover, .site-info a:visited, .site-info a:focus {
+.site-info a, .site-info a:hover, .site-info a:visited, .site-info a:focus,.button--primary:active, .button--primary:visited {
 color: white;
 }
 .site-info {
