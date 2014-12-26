@@ -27,15 +27,21 @@
 
 	</div><!-- .entry-content -->
 <?php endif; ?>
-    <div  class="container nav-container" >
-	<p class="editorial-header__excerpt ">	<?php
-			wp_link_pages( array(
-				'before' => '<div class="article-nav">' . __( 'Pages:', 'google_s' ),
-				'after'  => '</div>',
-			) );
-			?>
+    <div  class="container nav-container posts" >
+	<p class="editorial-header__excerpt ">
+<?php
+
+wp_link_pages( array( 'before' => '<nav class="article-nav">', 
+'after' => '', 'previouspagelink' => '<span class="article-nav-link article-nav-link--prev">Previous page</span>', 'nextpagelink' => '', 
+'next_or_number' => 'next' ) ); 
+
+
+wp_link_pages( array( 'before' => '', 'after' => '</nav>', 'previouspagelink' => '', 
+'nextpagelink' => '<span class="article-nav-link article-nav-link--next">Next page</span>', 'next_or_number' => 'next' ) ); 
+?>
         </p>
     </div>
+        <div class="clear"></div>
 	<footer class="entry-footer">
 		<?php google_s_entry_footer(); ?>
 	</footer><!-- .entry-footer -->

@@ -36,13 +36,5 @@
 <br><a class="button--primary pull-right" href="<?php the_permalink(); ?>"> Read the full post</a>
                                 </div>
                     </div>
-        <div  class="container" >
-	<p class="editorial-header__excerpt ">	<?php
-			wp_link_pages( array(
-				'before' => '<div class="article-nav">' . __( 'Pages:', 'google_s' ),
-				'after'  => '</div>',
-			) );
-			?>
-        </p>
-    </div>	
+  
 </article>
