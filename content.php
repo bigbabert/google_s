@@ -27,13 +27,17 @@
                   <p styleclass="editorial-header__excerpt "><?php the_excerpt(); ?></p>
                   <!-- .entry-content -->
                   <?php elseif ( post_password_required() ) : ?>
-                 <?php  get_the_password_form(); ?>
+                 <p styleclass="editorial-header__excerpt "><?php the_content(); ?></p>
                   <!-- .entry-content -->
                <?php else : ?>
                  <p styleclass="editorial-header__excerpt "><?php the_excerpt(); ?></p>
                   <!-- .entry-content -->
  <?php endif; ?>
+<?php if ( post_password_required() ) : ?>
+<br><a class="button--primary pull-right" href="<?php the_permalink(); ?>"> Type password to Read</a>
+<?php else : ?>
 <br><a class="button--primary pull-right" href="<?php the_permalink(); ?>"> Read the full post</a>
-                                </div>
+<?php endif; ?>
+                        </div>
                     </div>
 </article>

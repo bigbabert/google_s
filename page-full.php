@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package Google_s
+ * @package Google_S
  */
 
 get_header(); ?>

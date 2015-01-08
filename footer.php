@@ -16,7 +16,7 @@
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'google_s' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'google_s' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'google_s' ), 'Google_s', '<a class="white" href="http://www.blog.altertech.it/author/alberto-cocchiara/" rel="designer"><i class="icon icon-performance"></i> Bigbabert</a> ' ); ?>
+			<?php printf( __( 'Theme: %1$s by %2$s.', 'google_s' ), 'Google_S', '<a class="white" href="http://www.blog.altertech.it/author/alberto-cocchiara/" rel="designer"><i class="icon icon-performance"></i> Bigbabert</a> ' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div>
