@@ -5,8 +5,10 @@
  * @package Google_S
  */
 ?>
-
 <div id="post-<?php the_ID(); ?>" >
+	<?php if ( function_exists('yoast_breadcrumb') ) {
+  yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+} ?>
     <p class="editorial-header__excerpt "><?php woocommerce_content(); ?></p>
 			
 			<div class="g-medium--1 g-medium--last g-wide--2">
