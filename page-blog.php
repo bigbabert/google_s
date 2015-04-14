@@ -20,27 +20,7 @@ get_header(); ?>
 		<?php get_template_part( 'content-blog', get_post_format() ); ?>
 
 		<?php endwhile; ?>
-		<?php if ($paged > 1) { ?>
-<div class="container nav-container">
-	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'google_s' ); ?></h1>
-		<div class="nav-links">
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'google_s' ) ); ?></div>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'google_s' ) ); ?></div>
-</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
-</div>
-		<?php } else { ?>
-<div class="container nav-container">
-	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'google_s' ); ?></h1>
-		<div class="nav-links">
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'google_s' ) ); ?></div>
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
-</div>
-
-		<?php } ?>
+		<?php google_s_paging_nav() ?>	
 
 		<?php wp_reset_postdata(); ?>
 

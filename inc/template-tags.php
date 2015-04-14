@@ -16,20 +16,20 @@ function google_s_comment_nav() {
 	// Are there comments to navigate through?
 	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
 	?>
-	<nav class="navigation comment-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'google_s' ); ?></h2>
-		<div class="nav-links">
+<div class="container-medium gs-mrg-top">
+<p class="large"><?php _e( 'Comment navigation', 'google_s' ); ?></p>
+	<nav class="article-nav gs-mrg-top" role="navigation">
 			<?php
 				if ( $prev_link = get_previous_comments_link( __( 'Older Comments', 'google_s' ) ) ) :
-					printf( '<div class="nav-previous">%s</div>', $prev_link );
+					printf( '<div class="article-nav-link article-nav-link--prev">%s</div>', $prev_link );
 				endif;
 
 				if ( $next_link = get_next_comments_link( __( 'Newer Comments', 'google_s' ) ) ) :
-					printf( '<div class="nav-next">%s</div>', $next_link );
+					printf( '<div class="article-nav-link article-nav-link--next">%s</div>', $next_link );
 				endif;
 			?>
-		</div><!-- .nav-links -->
 	</nav><!-- .comment-navigation -->
+</div>
 	<?php
 	endif;
 }
@@ -45,20 +45,12 @@ function google_s_paging_nav() {
 		return;
 	}
 	?>
-<div class="container nav-container">
-	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'google_s' ); ?></h1>
-		<div class="nav-links">
-
-			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'google_s' ) ); ?></div>
-			<?php endif; ?>
-
-			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'google_s' ) ); ?></div>
-			<?php endif; ?>
-
-		</div><!-- .nav-links -->
+<div class="container-medium gs-mrg-top">
+    		<p class="large"><?php _e( 'Posts navigation', 'google_s' ); ?></p>
+	<nav class="article-nav gs-mrg-top" role="navigation">
+			<?php previous_posts_link( __( '<div class="article-nav-link article-nav-link--next">Newer posts &rarr;</div>', 'google_s' ) ); ?>
+			<?php next_posts_link( __( '<div class="article-nav-link article-nav-link--prev">&larr; Older posts</div>', 'google_s' ) ); ?>
+<!-- .nav-links -->
 	</nav><!-- .navigation -->
 </div>
 	<?php
@@ -78,15 +70,14 @@ function google_s_post_nav() {
 		return;
 	}
 	?>
-<div class="container nav-container">
-	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'google_s' ); ?></h1>
-		<div class="nav-links">
+<div class="container-medium gs-mrg-top">
+    <p class="large"><?php _e( 'Posts navigation', 'google_s' ); ?></p>
+	<nav class="article-nav gs-mrg-top" role="navigation">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'google_s' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'google_s' ) );
+				previous_post_link( '<div class="article-nav-link article-nav-link--prev">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'google_s' ) );
+				next_post_link(     '<div class="article-nav-link article-nav-link--next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'google_s' ) );
 			?>
-		</div><!-- .nav-links -->
+		<!-- .nav-links -->
 	</nav><!-- .navigation -->
 </div>
 	<?php
@@ -98,9 +89,9 @@ if ( ! function_exists( 'google_s_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function google_s_posted_on() {
-	$time_string = '<span><i class="mdi-notification-event-available"></i> <time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+	$time_string = '<span><i class="genericon genericon-month gs-large"></i> <time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<span ><i class="mdi-notification-event-available"></i><time class="entry-date published" datetime="%1$s">%2$s</time> <i class="mdi-notification-sync"></i> <time class="updated" datetime="%3$s">%4$s</time></span>';
+		$time_string = '<span><i class="genericon genericon-month gs-large"></i> <time class="entry-date published" datetime="%1$s">%2$s</time> <i class="genericon genericon-refresh"></i> <time class="updated" datetime="%3$s">%4$s</time></span>';
 	}
 
 	$time_string = sprintf( $time_string,
@@ -111,16 +102,16 @@ function google_s_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( '<strong>Post info:</strong> %s', 'post date', 'google_s' ),
+		_x( '<strong>Post info:</strong><br> %s', 'post date', 'google_s' ),
 		' <a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
 		_x( '%s', 'post author', 'google_s' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a>'
+		'<span> <a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '"> <i class="genericon genericon-user gs-large"></i> ' . esc_html( get_the_author() ) . '</a>'
 	);
 
-	echo '<span class="posted-on"><span class="icon-circle themed--background"><i class="mdi-notification-event-note"></i></span>' . $posted_on . '<i class="mdi-social-person"></i> <span class="byline"> ' . $byline . '</span></span>';
+	echo '<span class="posted-on"><i class="genericon genericon-pinned gs-xlarge"></i>  ' . $posted_on . ' <span class="byline"> ' . $byline . '</span></span>';
 
 }
 endif;
@@ -151,7 +142,7 @@ function google_s_entry_footer() {
 		echo '</span>';
 	}
 
-	edit_post_link( __( 'Edit Post', 'google_s' ), '<span class="edit-link button--secondary"><i class="mdi-content-create"></i>', '</span>' );
+	edit_post_link( __( 'Edit Post', 'google_s' ), '<p><span class="button--secondary">', '</span></p>' );
 }
 endif;
 

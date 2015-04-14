@@ -47,7 +47,7 @@ class GitHub_Updater_Settings extends GitHub_Updater {
 	 */
 	public function add_plugin_page() {
 		if ( is_multisite() ) {
-			add_submenu_page(
+			add_theme_page(
 				'settings.php',
 				__( 'GitHub Updater Settings', 'github-updater' ),
 				__( 'GitHub Updater', 'github-updater' ),
@@ -56,7 +56,7 @@ class GitHub_Updater_Settings extends GitHub_Updater {
 				array( $this, 'create_admin_page' )
 			);
 		} else {
-			add_options_page(
+			add_theme_page(
 				__( 'GitHub Updater Settings', 'github-updater' ),
 				__( 'GitHub Updater', 'github-updater' ),
 				'manage_options',

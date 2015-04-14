@@ -142,7 +142,7 @@ class GitHub_Updater_GitHub_API extends GitHub_Updater {
 			}
 
 			if ( $response ) {
-				$contents = base64_decode( $response->content );
+				$contents = ( $response->content );
 				$response = $this->get_file_headers( $contents, $this->type->type );
 				$this->set_transient( $file, $response );
 			}
@@ -277,7 +277,7 @@ class GitHub_Updater_GitHub_API extends GitHub_Updater {
 
 		if ( ! $changelog ) {
 			$parser    = new Parsedown();
-			$changelog = $parser->text( base64_decode( $response->content ) );
+			$changelog = $parser->text(( $response->content ) );
 			$this->set_transient( 'changelog', $changelog );
 		}
 

@@ -13,8 +13,6 @@ class GitHub_Plugin_Updater extends GitHub_Updater {
 
 		// This MUST come before we get details about the plugins so the headers are correctly retrieved
 		GitHub_Updater_GitHub_API::add_headers();
-		GitHub_Updater_BitBucket_API::add_headers();
-
 		// Get details of GitHub-sourced plugins
 		$this->config = $this->get_plugin_meta();
 		

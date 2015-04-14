@@ -10,7 +10,4 @@
 <?php endif; ?>
                    <?php the_content(); ?>
                         
-		<?php edit_post_link( __( 'Edit', 'google_s' ), '<span class="edit-link">', '</span>' ); ?>
-
-        </div>
-        <main>
+     <?php edit_post_link( __( 'Edit', 'google_s' ), '<p><span class="button--secondary">', '</span></p>' ); ?>

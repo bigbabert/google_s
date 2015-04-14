@@ -17,30 +17,29 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-
-<div id="comments" class="comments-area">
-
+<div class="clearfix"></div>
+<div class="g-medium--full g-wide--full gs-mrg-top"><div class="container">
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
-		<h2 class="comments-title">
+		<p class="large">
 			<?php
-				printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'google_s' ),
+				printf( _nx( 'Un Commento su &ldquo;%2$s&rdquo;', '%1$s Commenti su &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'google_s' ),
 					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
 			?>
-		</h2>
+		</p>
 
 		<?php google_s_comment_nav(); ?>
 
-		<ol class="comment-list">
+		<ul class="featured-list">
 			<?php
 				wp_list_comments( array(
-					'style'       => 'ol',
+					'style'       => 'ul',
 					'short_ping'  => true,
 					'avatar_size' => 56,
 				) );
 			?>
-		</ol><!-- .comment-list -->
+		</ul><!-- .comment-list -->
 
 		<?php google_s_comment_nav(); ?>
 
@@ -50,9 +49,11 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'twentyfifteen' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'google_s' ); ?></p>
 	<?php endif; ?>
 
 	<?php comment_form(); ?>
 
-</div><!-- #comments -->
+        </div><!-- #comments -->
+</div>
+<div class="clearfix"></div>

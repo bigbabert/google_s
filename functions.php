@@ -21,8 +21,7 @@ add_action( 'init', array( 'GitHub_Updater', 'init' ) );
  * Sets up theme defaults and registers support for various WordPress features.
  */
   if ( ! function_exists( 'google_s_setup' ) ) :
-    if ( ! isset( $content_width ) ) $content_width = 900;
-
+      if ( ! isset( $content_width ) ) $content_width = 900;
 function google_s_setup() {
 
 	/*
@@ -48,6 +47,7 @@ if ( function_exists( 'add_theme_support' ) ) {
     add_theme_support( 'post-thumbnails' );
     set_post_thumbnail_size( 280, 210, true ); // Normal post thumbnails
     add_image_size( 'screen-shot', 720, 540 ); // Full size screen
+    add_image_size( 'google_s-large', 780, 540 ); // Full size screen
     }
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -90,8 +90,8 @@ function google_s_widgets_init() {
 		'description'   => 'This is a simple rght Sidebar, if i empty the site will be full width.',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
 		'name'          => __( 'Footer Sidebar', 'google_s' ),
@@ -215,52 +215,6 @@ function new_excerpt_more($more) {
 }
         }
 add_filter('excerpt_more', 'new_excerpt_more');
-
-/**
- * Meta box for Pages and Posts header
- */
-function prfx_custom_meta() {
-    add_meta_box( 'prfx_meta', __( 'Header Line', 'google_s' ), 'prfx_meta_callback', 'post', 'normal', 'high' );
-	add_meta_box( 'prfx_meta', __( 'Header Line', 'google_s' ), 'prfx_meta_callback', 'page', 'normal', 'high' );
-}
-add_action( 'add_meta_boxes', 'prfx_custom_meta' );
-
-/**
- * Outputs the content of the meta box
- */
-function prfx_meta_callback( $post ) {
-    wp_nonce_field( basename( __FILE__ ), 'prfx_nonce' );
-    $prfx_stored_meta = get_post_meta( $post->ID );
-    ?>
- 
-<p>
-    <label for="meta-textarea" class="prfx-row-title"><?php _e( 'Header Line after featured image in Posts and Pages', 'google_s' )?></label>
-    <textarea style="width: 100%;min-height: 180px;" name="meta-textarea" id="meta-textarea"><?php if ( isset ( $prfx_stored_meta['meta-textarea'] ) ) echo $prfx_stored_meta['meta-textarea'][0]; ?></textarea>
-</p>
-    <?php
-}
-/**
- * Saves the custom meta input
- */
-function prfx_meta_save( $post_id ) {
- 
-    // Checks save status
-    $is_autosave = wp_is_post_autosave( $post_id );
-    $is_revision = wp_is_post_revision( $post_id );
-    $is_valid_nonce = ( isset( $_POST[ 'prfx_nonce' ] ) && wp_verify_nonce( $_POST[ 'prfx_nonce' ], basename( __FILE__ ) ) ) ? 'true' : 'false';
- 
-    // Exits script depending on save status
-    if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
-        return;
-    }
- 
-// Checks for input and saves if needed
-if( isset( $_POST[ 'meta-textarea' ] ) ) {
-    update_post_meta( $post_id, 'meta-textarea', $_POST[ 'meta-textarea' ] );
-}
- 
-}
-add_action( 'save_post', 'prfx_meta_save' );
 /**
  * Customizing Login Page
  */

@@ -13,8 +13,8 @@
 			
 			<div class="g-medium--1 g-medium--last g-wide--2">
 	<p class="editorial-header__excerpt g--half g--centered">
-		<?php edit_post_link( __( 'Edit', 'google_s' ), '<span class="edit-link">', '</span>' ); ?>
+    <?php edit_post_link( __( 'Edit', 'google_s' ), '<p><span class="button--secondary">', '</span></p>' ); ?>
 	</p<!-- .entry-footer -->
-	<div class="g-medium--2 g-medium--push-1 g-medium--last g-wide--3 g-wide--push-1 g-wide--last altercomments">
-
+                        </div>
+</div>
 

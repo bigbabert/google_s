@@ -38,7 +38,7 @@
 
 .genericon {
 	font-size: 16px;
-	vertical-align: top;
+	vertical-align: middle;
 	text-align: center;
 	-moz-transition: color .1s ease-in 0;
 	-webkit-transition: color .1s ease-in 0;
@@ -207,3 +207,13 @@
 .genericon-xpost:before { content: "\f504"; }
 .genericon-youtube:before { content: "\f213"; }
 .genericon-zoom:before { content: "\f402"; }
+.gs-xlarge {
+font-size: 28px;
+font-weight: 300;
+padding-bottom: 0;
+}
+.gs-large {
+font-size: 22px;
+font-weight: 300;
+padding-bottom: 0;
+}

@@ -13,7 +13,6 @@
 
 get_header(); ?>
 
-
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
@@ -28,15 +27,14 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; ?>
-<div class="container nav-container">
+
 			<?php google_s_paging_nav(); ?>
-</div>
+
 		<?php else : ?>
 
 			<?php get_template_part( 'content', 'none' ); ?>
 
 		<?php endif; ?>
 <!-- #primary -->
-
-<?php get_sidebar(); ?>
+<?php get_sidebar('sidebar-2'); ?>
 <?php get_footer(); ?>

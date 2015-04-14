@@ -7,11 +7,10 @@
  * @package Google_S
  */
 ?>
-</div>
 <?php get_sidebar('sidebar-2'); ?>
-<div class="clear"></div>
+<div class="clearfix"></div>
 <div id="gc-footer" class="g-medium--full g-wide--full">
-	<div class="clear"></div>
+	<div class="g--half g--centered">
 	<footer id="colophon" class="site-footer " role="contentinfo">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'google_s' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'google_s' ), 'WordPress' ); ?></a>
