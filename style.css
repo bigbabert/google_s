@@ -346,3 +346,6 @@ border-bottom: 1px dotted #ccc;
 display: inline-block;
 font-size: 14px;
 }
+.single i {
+vertical-align: middle !important;
+}
