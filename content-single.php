@@ -30,12 +30,12 @@
 <?php
 
 wp_link_pages( array( 'before' => '<nav class="article-nav">', 
-'after' => '', 'previouspagelink' => '<span class="article-nav-link article-nav-link--prev">Previous page</span>', 'nextpagelink' => '', 
+'after' => '', 'previouspagelink' => '<div class="article-nav-link article-nav-link--prev">Previous page</div>', 'nextpagelink' => '', 
 'next_or_number' => 'next' ) ); 
 
 
 wp_link_pages( array( 'before' => '', 'after' => '</nav>', 'previouspagelink' => '', 
-'nextpagelink' => '<span class="article-nav-link article-nav-link--next">Next page</span>', 'next_or_number' => 'next' ) ); 
+'nextpagelink' => '<div class="article-nav-link article-nav-link--next">Next page</div>', 'next_or_number' => 'next' ) ); 
 ?>
         </p>
     </div>

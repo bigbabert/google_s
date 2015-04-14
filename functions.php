@@ -242,3 +242,12 @@ function change_title_on_logo() {
 }
 add_filter('login_headertitle', 'change_title_on_logo');
 add_filter('login_headerurl','loginpage_custom_link');
+ 
+function new_mail_from($old) {
+ return 'no-reply@blog.altertech.it';
+}
+function new_mail_from_name($old) {
+ return 'Altertech Blog - No Reply';
+}
+add_filter('wp_mail_from', 'new_mail_from');
+add_filter('wp_mail_from_name', 'new_mail_from_name');

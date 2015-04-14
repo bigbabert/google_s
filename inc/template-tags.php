@@ -41,15 +41,14 @@ if ( ! function_exists( 'google_s_paging_nav' ) ) :
  */
 function google_s_paging_nav() {
 	// Don't print empty markup if there's only one page.
-	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
-		return;
-	}
+
 	?>
 <div class="container-medium gs-mrg-top">
     		<p class="large"><?php _e( 'Posts navigation', 'google_s' ); ?></p>
 	<nav class="article-nav gs-mrg-top" role="navigation">
-			<?php previous_posts_link( __( '<div class="article-nav-link article-nav-link--next">Newer posts &rarr;</div>', 'google_s' ) ); ?>
-			<?php next_posts_link( __( '<div class="article-nav-link article-nav-link--prev">&larr; Older posts</div>', 'google_s' ) ); ?>
+			<div class="article-nav-link article-nav-link--prev"><?php previous_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'google_s' ) ); ?></div>
+
+			<div class="article-nav-link article-nav-link--next"><?php next_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'google_s' ) ); ?></div>
 <!-- .nav-links -->
 	</nav><!-- .navigation -->
 </div>
