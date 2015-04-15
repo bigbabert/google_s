@@ -197,7 +197,30 @@ function alter_add_lightbox() {
     wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/styles/jquery.fancybox.css' );
 }
 add_action( 'wp_enqueue_scripts', 'alter_add_lightbox' );
+function google_s_name_wp_title( $title, $sep ) {
+	if ( is_feed() ) {
+		return $title;
+	}
+	
+	global $page, $paged;
 
+	// Add the blog name
+	$title .= " $sep $site_name";
+
+	// Add the blog description for the home/front page.
+	$site_description = get_bloginfo( 'description', 'display' );
+	if ( $site_description && ( is_home() || is_front_page() ) ) {
+		$title .= " $sep $site_description";
+	}
+
+	// Add a page number if necessary:
+	if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
+		$title .= " $sep " . sprintf( __( 'Page %s', '_s' ), max( $paged, $page ) );
+	}
+
+	return $title;
+}
+add_filter( 'wp_title', 'google_s_name_wp_title', 10, 2 );
 // The Excerpt length
 function new_excerpt_length($length) {
 	return 80;

@@ -46,9 +46,9 @@ function google_s_paging_nav() {
 <div class="container-medium gs-mrg-top">
     		<p class="large"><?php _e( 'Posts navigation', 'google_s' ); ?></p>
 	<nav class="article-nav gs-mrg-top" role="navigation">
-			<div class="article-nav-link article-nav-link--prev"><?php previous_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'google_s' ) ); ?></div>
+			<div class="article-nav-link article-nav-link--prev"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'google_s' ) ); ?></div>
 
-			<div class="article-nav-link article-nav-link--next"><?php next_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'google_s' ) ); ?></div>
+			<div class="article-nav-link article-nav-link--next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'google_s' ) ); ?></div>
 <!-- .nav-links -->
 	</nav><!-- .navigation -->
 </div>
