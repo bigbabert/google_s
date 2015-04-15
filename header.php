@@ -42,7 +42,7 @@
             </div>
         </header>
          <div class="clearfix"></div>
-<div class="g-medium--full g-wide--full gs-top">
+<div style="background-color: #4285f4;" class="g-medium--full g-wide--full gs-top">
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
         <?php if ( get_theme_mod( 'google_s_logo' ) ) : ?>
 	<img src="<?php echo esc_url( get_theme_mod( 'google_s_logo' ) ); ?>" alt="<?php echo bloginfo( 'name' ); ?>">

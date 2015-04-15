@@ -125,23 +125,23 @@ function google_s_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'google_s' ) );
 		if ( $categories_list && google_s_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( '<i class="mdi-action-group-work"></i> <strong>Category:</strong> %1$s', 'google_s' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links gs-large">' . __( '<i class="genericon genericon-category gs-xlarge"></i> <strong>Category:</strong> %1$s', 'google_s' ) . '</span>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'google_s' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( '<i class="mdi-action-loyalty"></i> <strong>Tag:</strong>  %1$s', 'google_s' ) . '</span></br>', $tags_list );
+			printf( '<br><span class="tags-links gs-large">' . __( '<i class="genericon genericon-tag gs-xlarge"></i> <strong>Tag:</strong>  %1$s', 'google_s' ) . '</span></br>', $tags_list );
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'google_s' ), __( '1 Comment', 'google_s' ), __( '% Comments', 'google_s' ) );
+		comments_popup_link( __( 'Leave a comment <i class="genericon genericon-reply gs-xlarge"></i>', 'google_s' ), __( '1 Comment', 'google_s' ), __( '% Comments', 'google_s' ) );
 		echo '</span>';
 	}
 
-	edit_post_link( __( 'Edit Post', 'google_s' ), '<p><span class="button--secondary">', '</span></p>' );
+	edit_post_link( __( 'Edit Post', 'google_s' ), '<p><span class="button--secondary"> ', ' <i class="genericon genericon-edit gs-xlarge"></i></span></p>' );
 }
 endif;
 

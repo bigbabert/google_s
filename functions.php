@@ -197,30 +197,6 @@ function alter_add_lightbox() {
     wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/styles/jquery.fancybox.css' );
 }
 add_action( 'wp_enqueue_scripts', 'alter_add_lightbox' );
-function google_s_name_wp_title( $title, $sep ) {
-	if ( is_feed() ) {
-		return $title;
-	}
-	
-	global $page, $paged;
-
-	// Add the blog name
-	$title .= " $sep $site_name";
-
-	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) ) {
-		$title .= " $sep $site_description";
-	}
-
-	// Add a page number if necessary:
-	if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-		$title .= " $sep " . sprintf( __( 'Page %s', '_s' ), max( $paged, $page ) );
-	}
-
-	return $title;
-}
-add_filter( 'wp_title', 'google_s_name_wp_title', 10, 2 );
 // The Excerpt length
 function new_excerpt_length($length) {
 	return 80;
@@ -274,3 +250,32 @@ function new_mail_from_name($old) {
 }
 add_filter('wp_mail_from', 'new_mail_from');
 add_filter('wp_mail_from_name', 'new_mail_from_name');
+
+function alter_comment_author_to_reply_link($link, $args, $comment){
+ 
+    $comment = get_comment( $comment );
+ 
+    // If no comment author is blank, use 'Anonymous'
+    if ( empty($comment->comment_author) ) {
+        if (!empty($comment->user_id)){
+            $user=get_userdata($comment->user_id);
+            $author=$user->user_login;
+        } else {
+            $author = __('Anonimo');
+        }
+    } else {
+        $author = $comment->comment_author;
+    }
+ 
+    // If the user provided more than a first name, use only first name
+    if(strpos($author, ' ')){
+        $author = substr($author, 0, strpos($author, ' '));
+    }
+ 
+    // Replace Reply Link with "Reply to &lt;Author First Name>"
+    $reply_link_text = $args['reply_text'];
+    $link = str_replace($reply_link_text, 'Rispondi a' . $author, $link);
+ 
+    return $link;
+}
+add_filter('comment_reply_link', 'alter_comment_author_to_reply_link', 10, 3);
