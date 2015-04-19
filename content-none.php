@@ -7,6 +7,11 @@
  * @package Google_S
  */
 ?>
+    <div class="container">
+	<?php if ( function_exists('yoast_breadcrumb') ) {
+  yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+} ?>
+    </div>
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 <div <?php if ( ! is_active_sidebar( 'sidebar-1' ) ) : ?>class="g-medium--full g-wide--full tophome"<?php else : ?>class="g-medium--full g-wide--full"<?php endif; ?>>
 	<div class="highlight-module   highlight-module--remember g-medium--full g-wide--full ">

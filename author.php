@@ -11,6 +11,12 @@
   get_header(); ?>
 <div class="g-wide--3 g-medium--half">
 <article style="border-bottom: 1px solid #ccc;" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <div class="container">
+	<?php if ( function_exists('yoast_breadcrumb') ) {
+  yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+} ?>
+    </div>
+	
 			<div  class="container gs-mrg-top" >
 <!-- This sets the $curauth variable -->
     <?php
