@@ -5,9 +5,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <div class="container">
 	<?php if ( function_exists('yoast_breadcrumb') ) {
   yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 } ?>
+    </div>
 		<div class="editorial-header">
 			<div  class="container" >
 			<h1 class="tag editorial-header__title">
