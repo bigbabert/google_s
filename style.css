@@ -228,9 +228,13 @@ a.url.fn.n {
 .page-template-page-full #secondary {
     display: none !important;
 }
-.logo, .white, .white:visited {
+.white, a.white:visited, a.white:focus, a.white:active, a.white:hover {
+    color: #fff !important;
+}
+.logo {
     color: white;
-}.gs_left {
+}
+.gs_left {
     padding-left: 15% !important;
     margin-bottom: 15px;
 }
