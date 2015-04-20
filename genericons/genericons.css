@@ -4,7 +4,7 @@ url('Genericons.ttf') format('truetype'),
 url('Genericons.svg#genericonsregular') format('svg');font-weight:normal;font-style:normal;}
 @media screen and (-webkit-min-device-pixel-ratio:0){@font-face{font-family:"Genericons";src:url("./Genericons.svg#Genericons") format("svg");}
 }
-.genericon{font-size:16px;vertical-align:middle;text-align:center;-moz-transition:color .1s ease-in 0;-webkit-transition:color .1s ease-in 0;display:inline-block;font-family:"Genericons";font-style:normal;font-weight:normal;font-variant:normal;line-height:1;text-decoration:inherit;text-transform:none;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;speak:none;}
+.genericon{font-size:16px;vertical-align:top;text-align:center;-moz-transition:color .1s ease-in 0;-webkit-transition:color .1s ease-in 0;display:inline-block;font-family:"Genericons";font-style:normal;font-weight:normal;font-variant:normal;line-height:1;text-decoration:inherit;text-transform:none;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;speak:none;}
 .genericon-404:before{content:"\f423";}
 .genericon-activity:before{content:"\f508";}
 .genericon-anchor:before{content:"\f509";}
@@ -152,5 +152,3 @@ url('Genericons.svg#genericonsregular') format('svg');font-weight:normal;font-st
 .genericon-xpost:before{content:"\f504";}
 .genericon-youtube:before{content:"\f213";}
 .genericon-zoom:before{content:"\f402";}
-.gs-xlarge{font-size:28px !important;font-weight:300;padding-bottom:0;}
-.gs-large{font-size:22px !important;font-weight:300;padding-bottom:0;}
