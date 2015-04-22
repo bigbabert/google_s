@@ -40,9 +40,6 @@ if ( post_password_required() ) {
 				) );
 			?>
 		</ul><!-- .comment-list -->
-
-		<?php google_s_comment_nav(); ?>
-
 	<?php endif; // have_comments() ?>
 
 	<?php

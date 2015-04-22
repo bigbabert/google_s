@@ -8,8 +8,7 @@
 
 		<div class="editorial-header">
 			<div  class="container" >
-
-			<h1 class="tag editorial-header__title">		
+		<h1 class="tag editorial-header__title">		
 	    <?php if ( 'post' == get_post_type() ) : ?>
 			<?php google_s_posted_on(); ?>
 		<?php endif; ?>

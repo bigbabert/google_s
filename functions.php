@@ -215,12 +215,14 @@ function new_excerpt_more($more) {
         }
 add_filter('excerpt_more', 'new_excerpt_more');
 /**
- * Customizing Login Page
+ * Customizing Login Logo Page
  */
+if ( get_theme_mod( 'google_s_login_logo' ) ) : 
 function alter_login_logo() { ?>
+
     <style type="text/css">
          body.login div#login h1 a {
-background-image: url( '<?php echo get_stylesheet_directory_uri(); ?>/images/login-logo.png' );
+background-image: url( '<?php echo esc_url( get_theme_mod( 'google_s_login_logo' ) ); ?>' );
 margin: 0;
 width: 160px;
 height: 160px;
@@ -233,6 +235,8 @@ border-radius: 50%;
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'alter_login_logo' );
+endif;
+
 function loginpage_custom_link() {
 	return esc_url( home_url( '/' ) );
 }
@@ -261,7 +265,7 @@ function alter_comment_author_to_reply_link($link, $args, $comment){
             $user=get_userdata($comment->user_id);
             $author=$user->user_login;
         } else {
-            $author = __('Anonimo');
+            $author = __('Anonymous');
         }
     } else {
         $author = $comment->comment_author;

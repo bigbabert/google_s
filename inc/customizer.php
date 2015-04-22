@@ -32,7 +32,7 @@ function google_s_customize_register( $wp_customize ) {
     $wp_customize->add_section( 'google_s_logo_section' , array(
 	    'title'       => __( 'Logo', 'google_s' ),
 	    'priority'    => 30,
-	    'description' => 'Upload a logo to replace the default site name and description in the header',
+	    'description' => __( 'Upload a logo to replace the default site name and description in the header', 'google_s' ),
 	) );
 	$wp_customize->add_setting( 'google_s_logo', array(
 		'sanitize_callback' => 'esc_url_raw',
@@ -41,6 +41,20 @@ function google_s_customize_register( $wp_customize ) {
 		'label'    => __( 'Logo', 'google_s' ),
 		'section'  => 'google_s_logo_section',
 		'settings' => 'google_s_logo',
+	) ) );
+        // Login Logo upload
+    $wp_customize->add_section( 'google_s_login_logo_section' , array(
+	    'title'       => __( 'Login Logo', 'google_s' ),
+	    'priority'    => 32,
+	    'description' => __( 'Upload a logo to replace the default WordPress Login Logo', 'google_s' ),
+	) );
+	$wp_customize->add_setting( 'google_s_login_logo', array(
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'google_s_login_logo', array(
+		'label'    => __( 'Login Logo', 'google_s' ),
+		'section'  => 'google_s_login_logo_section',
+		'settings' => 'google_s_login_logo',
 	) ) );
 }
 add_action( 'customize_register', 'google_s_customize_register' );

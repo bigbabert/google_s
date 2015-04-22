@@ -36,5 +36,4 @@ get_header(); ?>
 
 		<?php endif; ?>
 <!-- #primary -->
-<?php get_sidebar('sidebar-2'); ?>
 <?php get_footer(); ?>

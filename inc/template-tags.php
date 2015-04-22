@@ -34,7 +34,6 @@ function google_s_comment_nav() {
 	endif;
 }
 endif;
-
 if ( ! function_exists( 'google_s_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
