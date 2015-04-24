@@ -11,7 +11,9 @@
   yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 } ?>
     </div>
-    <p class="editorial-header__excerpt "><?php woocommerce_content(); ?></p>
+    <div class="container">
+        <?php woocommerce_content(); ?>
+    </div>
 			
 			<div class="g-medium--1 g-medium--last g-wide--2">
 	<p class="editorial-header__excerpt g--half g--centered">

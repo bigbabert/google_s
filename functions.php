@@ -223,15 +223,18 @@ function alter_login_logo() { ?>
     <style type="text/css">
          body.login div#login h1 a {
 background-image: url( '<?php echo esc_url( get_theme_mod( 'google_s_login_logo' ) ); ?>' );
-margin: 0;
-width: 160px;
-height: 160px;
-background-size: 100%;
-background-position: center;
-margin-left: 28%;
-margin-bottom: 5%;
-border-radius: 50%;
+background-size:100%;
+background-position: center top;
+background-repeat: no-repeat;
+color: #999;
+height: 240px;
+font-size: 0px;
+margin: 0 auto 55px;
+width: 320px;
+text-indent: -9999px;
+display: block;
         }
+        #login {padding:1% 0 0;}
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'alter_login_logo' );
