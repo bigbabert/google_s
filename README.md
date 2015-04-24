@@ -30,7 +30,7 @@ also on Google Web Starter Kit https://developers.google.com/web/starter-kit/, G
 
 <p>Try our new starter this theme completely responsive and SEO friendly, Google_S made based on Google Web Starter Kit (Node.js, Sass, Gulp).</p> <p>We would be extremely grateful for feedback, reports or suggestions.</p>
 
-<p>Google_S Theme is tested up to Wordpress 4.1 and Woocommerce 2.2.10.</p>
+<p>Google_S Theme is tested up to Wordpress 4.2 and Woocommerce 2.3.8.</p>
 
 <img src="https://raw.githubusercontent.com/bigbabert/google_s/master/screenshot.png">
 
